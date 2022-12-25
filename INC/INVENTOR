@@ -1,0 +1,7 @@
+			(if ((inventory at: ixx) ownedBy: curRoomNum)
+			(cond
+				((not ((inventory at: ixx) ownedBy: curRoomNum))
+
+				(if (= object (inventory saidMe:))
+					(if (ego has: (inventory indexOf: object))
+

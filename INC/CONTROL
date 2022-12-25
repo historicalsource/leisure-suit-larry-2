@@ -1,0 +1,4 @@
+
+		(if (& (ego onControl:) cBlue)
+			(curRoom newRoom: 31)
+		)

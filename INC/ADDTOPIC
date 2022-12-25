@@ -1,0 +1,6 @@
+		((View new:)
+			view: 			v
+			ignoreActors:
+			addToPic:
+		)
+

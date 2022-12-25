@@ -1,0 +1,9 @@
+cd \sierra\lsl2
+ren Sierra.exe AL
+debug AL
+e 8cbd 8b c2 eb f4 b8 02 00 90
+w
+q
+ren AL Sierra.exe
+
+Answer "7448" every time from now on.

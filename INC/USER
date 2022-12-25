@@ -1,0 +1,10 @@
+				(User 
+					canControl: 	FALSE
+					canInput: 		FALSE
+				)
+				(ego setMotion:	FALSE)
+				(User 
+					canControl:		TRUE
+					canInput:		TRUE
+				)
+

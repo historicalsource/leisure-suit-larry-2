@@ -1,0 +1,22 @@
+(instance aLA of Actor
+	(method (cue)
+		(self hide:)
+	)
+)
+
+	(method (newRoom n)
+		(aBigFace dispose:)
+		(super newRoom: n)
+	)
+
+		(aLA 
+			view:				vShipDeparting
+			setLoop:			lLA
+			setPri:			1
+			posn:				55 38
+			setStep:			1 1
+			moveSpeed:		4
+			init:
+			setMotion:		MoveTo -63 38 self
+		)
+

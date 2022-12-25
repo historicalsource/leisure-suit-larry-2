@@ -1,0 +1,19 @@
+		(if (Said 'get/xx')
+			(cond
+				((!= currentStatus NORMAL)
+					(Print notNow)
+				)
+				((not ((inventory at: ixx) ownedBy: curRoomNum))
+					(Print alreadyTookIt)
+				)
+				((not (ego inRect: nearxx))
+					(Print notCloseEnough)
+				)
+				(else
+					(ego get: ixx)
+					(theGame changeScore: 2)
+					(Print "")
+				)
+			)
+		)
+

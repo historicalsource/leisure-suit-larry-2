@@ -1,0 +1,35 @@
+			(cond
+				(xxVar
+					(Print "")
+				)
+
+				((== currentStatus SITTING)
+					(Print youAre)
+				)
+
+				((!= currentStatus NORMAL)
+					(Print notNow)
+				)
+
+				((not (ego inRect: nearxx))
+					(Print notCloseEnough)
+				)
+
+				((not ((inventory at: ixx) ownedBy: curRoomNum))
+					(Print "")
+				)
+				
+				((ego has: ixx)
+					(self changeState: xxInit)
+				)
+
+				((and xxVar
+						(ego has: i))
+					(self changeState: xxInit)
+				)
+
+				(else
+					(self changeState: xxInit)
+				)
+			)
+

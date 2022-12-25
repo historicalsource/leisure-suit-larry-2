@@ -1,0 +1,12 @@
+	blockxx
+
+		((= blockxx (Block new:))
+			top:				129
+			bottom:			136
+			left:				-20
+			right:			-10
+			init:
+		)
+
+			observeBlocks:	blockxx
+

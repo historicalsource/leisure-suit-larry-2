@@ -1,0 +1,77 @@
+	lclWindow
+
+	startFalling								 ;**	falling script values
+	fallDone
+
+		(Load VIEW vEgoFalling)
+
+			((and	(& (ego onControl:) cBlue)
+					(== currentStatus NORMAL))
+				(ego setPri: ltBlack)
+				(self changeState: startFalling)
+			)
+
+			((and	(& (ego onControl:) cGreen)
+					(== currentStatus NORMAL))
+				(ego setPri: black)
+				(self changeState: startFalling)
+			)
+
+
+			(startFalling
+				(User
+					canControl: 	FALSE
+					canInput: 		FALSE
+				)
+
+				(= lclWindow (Print "Oh, shhhhhhhh..." HIGH dispose:))
+				(= currentStatus FALLING)
+				;**	(sound sFalling)
+
+				(ego
+					view:			vEgoFalling
+					illegalBits:0
+					ignoreActors:
+					ignoreBlocks:
+					setStep:		1 5
+					setCycle:	Forward
+					setMotion:	MoveTo (ego x?) ( + (ego y?) 200) self
+				)
+			)
+
+			(fallDone
+				(lclWindow dispose:)
+				(= lclWindow FALSE)
+
+				(= currentStatus NEAR_DEATH)
+				(Print "
+					Perhaps Kalalau's love only SEEMED to give you wings!
+					")
+				(= currentStatus DEAD)
+				(if debugging
+					((= blockEast (Block new:))
+						top:				1
+						bottom:			222
+						left:				328
+						right:			333
+						init:
+					)
+
+					((= blockSouth (Block new:))
+						top:				192
+						bottom:			222
+						left:				99
+						right:			333
+						init:
+					)
+
+					(NormalEgo)
+					(ego
+						observeBlocks:	blockEast blockSouth
+						posn: 		restoreX restoreY
+					)
+
+					(self changeState: intro)	;**	back to normal
+				)
+			)
+

@@ -1,0 +1,6 @@
+
+		(if (== currentStatus NEAR_DEATH)
+			(return)
+		)
+
+

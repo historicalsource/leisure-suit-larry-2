@@ -1,0 +1,77 @@
+
+
+
+
+										HOW TO MAKE DISKS
+										=================
+
+
+
+Reminder:  be sure to update your \system subdirectory, if necessary.  
+
+
+	1. First, rebuild all the system files:
+
+			cd \system
+			redo			which redirects output to \ll2\script
+				this requires:
+					SC.exe
+					redo.lst		with the names of all the system *.sc files
+
+
+
+	2. Then, rebuild all the Larry2 stuff:
+
+			cd \ll2
+			redo			also redirects output to \ll2\script
+				this requires:  
+					TM.com 		to time the make (just for fun; unnecessary), 
+					VC.bat which calls: 
+					\system\vc 	(the vocab compiler), and then
+									copies the output to \ll2\script
+					SC.exe
+					INCVER.exe 	which needs the file \ll2\version 
+
+
+
+	3. Then, build the resource.* files for 360s and 720s:
+
+			cd vols
+			make360		to make just 360K resource.*
+			make720		to make just 720K resource.*
+			makeall		to make both 360K and 720K resource.*
+				these require:
+					TM (for fun)
+					makevols
+
+
+
+	4. Finally, copy the resource.*, .exe, and .bat files to floppies:
+
+			copy360 		to make just 360K disks
+			copy720		to make just 720K disks
+			copyall		makes 360K disks, then makes 720K disks
+			copyboth		makes 360K disks interleaved with 720K disks (fastest 
+								since it copies one size while you change other size.
+								BE CAREFUL, as it's easy to copy over another disk
+								while you are busy sleeping with boredom!)
+				these require:
+					makevols.exe  \
+					sciv.exe       \
+					install.exe 	 >	in \system
+					drvcopy.bat    /
+					*.drv	        /
+		
+					exists.com     \
+					godir.com       > in \system
+					space.com      /         
+		
+		
+					lsl2.bat       \  in \ll2\vols   
+					instgame.bat   /     
+
+
+					__insth.bat			different files in both 360 and 720 subdirs
+
+
+					Volabel 				somewhere in path

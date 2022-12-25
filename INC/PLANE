@@ -1,0 +1,13 @@
+		((= aPlane (Airplane new:))
+			view:				vAirplane
+			setLoop:			RELEASE			 ;**	these are the default values
+			setCel:			0					 ;**	If ok, delete these lines.
+			startX:			-60
+			startY:			22
+			endX:				380
+			endY:				22
+			delayMin:		22
+			delayMax:		60
+			init:
+		)
+

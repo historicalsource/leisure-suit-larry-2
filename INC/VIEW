@@ -1,0 +1,10 @@
+		((= a (View new:))
+			view:				v
+			loop:			
+			cel:			
+			setPri:			
+			posn:				
+			stopUpd:
+			init:
+		)
+

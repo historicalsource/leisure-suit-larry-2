@@ -1,0 +1,881 @@
+;**
+;**	Resource.360 -- Resource list for the floppy-disk version of:
+;**
+;**	Leisure Suit Larry goes "Looking for Love" (in Several Wrong Places)
+;**		by Al Lowe
+;**
+;**	Last Update:	October 19, 1988
+;**
+
+
+;**		These are the standard resource names and their corresponding types.
+;**	The type field may be entered in HEX or decimal. These lines must
+;**	precede their use.
+
+
+;**
+;**	Use: MAKEVOLS
+;**		[-eNUM (entries default to 2048)]
+;**		[-v(verbose)]
+;**		[-c (no compression)]
+;**		[-fdriver_file_spec]
+;**
+
+
+resource	view		0x80 	c:/ll2/view/view
+resource	pic		0x81 	c:/ll2/pic/pic
+resource	script	0x82	c:/ll2/script/script
+resource	text		0x83	c:/ll2/script/text
+resource	sound		0x84 	c:/ll2/sound/sound
+;resource MEMORY	0x85					;  (not loaded from disk)
+resource	vocab		0x86	c:/ll2/script/vocab
+resource	font		0x87 	c:/ll2/system/font
+resource	cursor	0x88	c:/ll2/system/cursor
+
+
+volumes		6									;**	number of disks in game
+
+
+; --- 0 --- 0 --- 0 --- 0 --- 0 --- 0 --- 0 --- 0 --- 0 --- 0 --- 0 --- 0 ---
+
+
+volume		0									;**	Put inventory views, system files,
+													;**	all rm0 resources here:
+	script		987							;**	gauge
+	script		988							;**	extra
+	script		991							;**	the jumper script
+
+	vocab			900							;**	Pablo's Parser
+	vocab			901							;**	Son of PP
+
+	font			000							;**	default system font
+	font			001							;**	default user font
+	font			004							;**	default small font
+	font			999							;**	default debug font
+
+	text			002							;**	Inventory view text (no script)
+	view			005							;**	inventory views
+	view			006
+	view			007
+	view			008
+	view			009
+	view			010
+	view			015
+	view			017
+	view			019
+	view			020
+	view			021
+	view			024
+	view			025
+	view			026
+	view			027
+
+	view			110							;**	Big Egos
+	view			111							;**	"
+	view			112							;**	"
+
+	view			118							;**	menu cute shit
+	view			119
+
+	view			100							;**	ego
+
+	sound			103							;**	mDead
+	sound			106
+
+
+script		003
+script		004
+script		005
+script		006
+	view			511
+
+
+script		007								;**	Generic barber shop
+	pic			125
+	view			232
+	sound			107							;**	barber music
+
+
+script		008								;**	rgHenchette
+	sound			105							;**	henchette music
+
+
+script		009
+	pic			178
+
+
+
+
+; --- 1 --- 1 --- 1 --- 1 --- 1 --- 1 --- 1 --- 1 --- 1 --- 1 --- 1 --- 1 ---
+
+
+volume	1										;**	boot disk: intrep, drivers, batch
+
+	sound			007							;**	sScored
+	
+	script		000
+	script		255
+	script		989
+	script		990
+	script		992
+	script		993
+	script		994
+	script		995
+	script		996
+	script		997
+	script		998
+	script		999
+
+	vocab			000
+	vocab			995
+	vocab			996
+	vocab			997
+	vocab			998
+	vocab			999
+
+	cursor		997
+	cursor		999
+
+
+
+script		010
+	pic			010
+	view			060
+
+
+script		090
+	pic			090
+	pic			091
+	view			800
+	view			809
+	view			815
+	view			193
+	view			801
+	sound			101							;**	Music for opening cartoon
+
+
+script		091
+	pic			023
+	view			253
+	view			802
+	view			803
+	view			192
+	view			804
+
+
+script		092
+	pic			092
+	view			821
+	view			806
+	sound			102
+
+
+script		093
+	pic			093
+	view			816
+	view			818
+	view			819
+	view			820
+	sound			110
+
+
+; --- 2 --- 2 --- 2 --- 2 --- 2 --- 2 --- 2 --- 2 --- 2 --- 2 --- 2 --- 2 ---
+
+
+volume	2
+
+
+script		99									;**	The restart speed checker
+
+script		200
+
+	view			001							;**	LA only inventory views
+	view			002
+	view			003
+	view			004
+
+
+script		011
+	pic			011
+	view			200
+	view			204
+	view			205
+
+
+script		012
+	pic			012
+	view			247
+
+
+script		013
+	pic			013
+	view			242
+
+
+script		014
+	pic			014
+	view			243
+
+
+script		015
+	pic			015
+	view			220
+	view			223							;**	vMusicHench (on airplane too)
+
+
+script		016
+	pic			016
+	view	 		224
+
+
+script		017
+	pic			017
+	view	 		250
+
+
+script		018
+	pic			018
+	view	 		240
+	view	 		227
+
+
+script		019
+	pic			019
+	view	 		254
+
+
+script		020
+	pic			020
+	view	 		251
+
+
+script		021
+	pic			021
+	view	 		241
+
+
+script		022
+	pic			022
+	view			102
+	view			234
+	view	 		235
+	view	 		252
+
+
+script		023
+	pic			023
+	view	 		253
+
+
+script		024
+	pic			024
+	view			255
+
+
+script		025
+	pic			025
+	view	 		231
+	view	 		230
+
+
+script		026
+	pic			026
+	pic			126
+	view	 		237
+	view	 		236
+
+
+script		114
+	pic			114
+	view			218
+	view			219
+
+
+script		115
+	pic			115
+	view			221
+	view			222
+
+
+script		116
+	pic			116
+	view			225
+	view			226
+
+
+script		118
+	pic			118
+	view			228
+	view			229
+
+
+script		125								;**	barber shop; pic is global
+	view			245							;**	dirty thoughts
+	view			248							;**	clean thoughts
+	view			246
+	view			244
+	view			233
+
+
+script		101
+	pic			101
+	view			201
+	view			203
+
+
+script		102
+	pic			102
+	view			202
+	view			206
+	view			217
+	view			101							;**	vEgoSitting
+
+
+script		103
+	pic			103
+	view			210
+	view			207
+	view			209
+	view			208
+	view			212
+	sound			108
+
+
+script		104
+	pic			104
+	view			214
+	view			216
+	view			213
+	view			215
+	sound			009
+	sound			109
+
+
+; --- 3 --- 3 --- 3 --- 3 --- 3 --- 3 --- 3 --- 3 --- 3 --- 3 --- 3 --- 3 ---
+
+
+volume	3
+
+
+script		027
+	pic			027
+	view	 		238
+
+
+script		028
+	pic			028
+	view	 		239
+	view	 		815							;**	vSparkles
+	sound			116
+
+
+script 		300
+
+	view			011							;**	SHIP only inventory views
+	view			012
+	view			013
+	view			014
+
+
+script		131
+script		031
+	pic			031
+	view	 		129
+	view	 		130
+	view	 		300
+	view	 		301
+	view	 		620
+
+
+script		032
+	pic			032
+	view			304
+	view			309
+	view			132
+	view			131
+	sound			006							;**	sBOOM
+
+
+script		033
+	pic			033
+	view			305
+	view			306
+	view			307
+	view			308
+	view			313
+
+
+script		034
+	pic			034
+	view			310
+	view			311
+	view			134
+	view			135
+	view			137
+	view			138
+	view			139
+
+
+script		134
+	pic			134
+	view			314
+	view			136
+
+
+script		035
+	pic			035
+	view			315
+	view			316
+	view			319
+	view			104
+
+
+script		036
+	pic			036
+	view			322
+	view			323
+	view			321
+	view			324
+
+
+script		037
+	view			303
+	view			302
+	view			133
+
+
+script		038
+	pic			038
+	view			141
+
+
+script		138
+	pic			138
+	view			120
+	view			326
+	view			123
+	view			121
+	view			122
+	view			124
+
+
+;**	The dumb bastard fell for it; make him change disks to die!
+
+script		095
+	pic			095
+	view			829
+	view			191
+	view			113
+
+
+script		096
+	pic			096
+	view			830
+	sound			115
+
+
+
+; --- 4 --- 4 --- 4 --- 4 --- 4 --- 4 --- 4 --- 4 --- 4 --- 4 --- 4 --- 4 ---
+
+
+volume	4
+
+script		400
+script		401
+
+
+	view			016							;**	bikini bottom
+	view			018							;**	soap
+
+
+script		040
+	pic			040
+	view			414
+	view			415
+	view			700
+	view			412
+	view			145
+	view			146
+	view			147
+	view			157
+	sound			113
+	sound			008
+
+
+script		041
+	pic			041
+	view			400
+	view			401
+	view			402
+	view			403
+
+
+script		042
+	pic			042
+	view			407
+	view			144
+	view			409
+	view			408
+
+
+script		043
+	pic			043
+	view			432
+	view			433
+	view			434
+	view			435
+	view			438
+	view			101							;**	vEgoSitting
+
+
+script		044
+	pic			044
+	view			150
+	view			151
+	view			152
+	view			416
+	view			417
+	view			418
+	view			419
+	view			436
+	sound			012							;**	drum fill
+
+
+script		045
+	view			149
+	view			430
+	view			431
+
+
+script		047
+	pic			047
+	view			406
+	view			410
+	view			411
+	view			413
+
+
+script		048
+	pic			048
+	view			156
+	view			157
+	view			158
+	view			159
+	sound			013
+	sound			014
+	sound			015
+
+
+
+
+; --- 5 --- 5 --- 5 --- 5 --- 5 --- 5 --- 5 --- 5 --- 5 --- 5 --- 5 --- 5 ---
+
+
+volume	5
+
+script		500
+sound			005
+
+	view			022							;**	suitcase
+	view			023							;**	airline ticket
+
+
+script		050
+	pic			050
+	view			500
+	view			501
+	view			502
+	view			503
+	view			504
+
+
+script		051
+	pic			051
+	view	 		506
+	view	 		230
+	view			523
+	view			524
+
+
+script		151
+	view			507
+
+
+script		052
+	pic			052
+	view			155
+	view			508
+	view			509
+	view			510
+	view			608
+
+
+script		152
+	pic			152
+	sound			006							;**	sBOOM
+
+
+script		053
+	pic			053
+	view			513
+	view			514
+
+
+script		054
+	pic			054
+	view			516
+	view			515
+	font			007							;**	Al's big boy font
+
+
+script		055
+	pic			055
+	view			519
+	view			520
+
+
+script		056
+	pic			056
+	view			522
+
+
+script		057
+	pic			057
+	view			525
+
+
+script		600
+
+script		058
+	pic			058
+	view			600
+
+
+script		061
+	pic			061
+	view			661
+	view			603
+
+
+script		062
+	pic			062
+	view			602
+	view			611
+	view			610
+	view			163
+	view			604
+	view			223							;**	vMusicHench (on airplane too)
+
+
+script		063
+	pic			063
+	view			605
+	view			608
+	view			161
+
+
+script		064
+	pic			064
+	view			162
+	view			620
+
+
+script		065
+	pic			065
+	view			607
+
+
+script		700
+script		070
+	pic			070
+	view			170
+	sound			001
+
+
+
+;**	The closing cartoon, part A:
+
+script		083
+	pic			178
+	view			185
+	sound			011
+
+
+script		084
+	pic			84	
+	view			197
+	view			198
+	view			817
+	view			818
+	view			831
+	view			832
+	view			833
+	view			834
+	view			835
+	sound			104
+	sound			010
+	sound			112
+	sound			016
+
+
+script		085
+	pic			095
+	view			197
+	view			829
+	
+
+script		092
+	pic			092
+	view			821
+	view			806
+
+
+
+
+
+; --- 6 --- 6 --- 6 --- 6 --- 6 --- 6 --- 6 --- 6 --- 6 --- 6 --- 6 --- 6 ---
+
+
+volume	6
+
+script		700
+
+	view			028							;**	Island only inventory views
+	view			029
+	view			030
+	view			031
+
+
+script		071
+	pic			071
+	view			105
+	view			114
+	view			171
+	view			173
+	view			702
+	view			721
+	view			103							;**	vEgoFalling
+	sound			001							;**	sFalling
+	sound			002							;**	sStunned
+	sound			003							;**	sBees
+
+
+script		072
+	pic			072
+	view			701
+	view			172
+	view			174
+
+
+script		073
+	pic			073
+	view			722
+	view			175
+
+
+script		074
+	pic			074
+	view			178
+	view			729
+	view			177
+	view			176
+
+
+script		075
+	pic			075
+	pic			099
+	view			705
+	view			703
+	view			704
+	view			706
+	view			807
+	font			007							;**	Al's big boy font
+	sound			017							;**	copter
+	sound			116
+
+
+script		076
+	pic			076
+	view			707
+	view			714
+	view			195
+	view			710
+	view			194
+	sound			114
+
+
+script		077
+	pic			077
+	view			708
+	view			709
+
+
+script		078
+	pic			078
+	view			716
+	view			707
+	view			710
+	view			714
+	view			823
+	view			822
+	view			713
+	view			212							;**	vCameraman
+	view			833
+	sound			111
+
+
+script		079
+	pic			079
+	view			725
+	view			179
+
+
+script		080
+	pic			080
+	view			728
+
+
+script		081
+	pic			081
+	view			726
+	view			181
+	view			182
+	view			183
+
+
+script		181
+	pic			181
+	view			727
+
+
+script		082
+	pic			082
+	view			715
+	view			184
+	sound			001
+
+
+script		152
+	pic			152
+	sound			004
+
+
+
+;**	Closing cartoon, part B:
+
+script		178
+	view			196
+	view			717
+	view			711
+	view			712
+
+
+script		086
+	pic			086
+	view			718
+	view			825
+	view			116
+	view			827
+	view			824
+	sound			116
+

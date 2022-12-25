@@ -1,0 +1,12 @@
+		((= a (Prop new:))
+			view:				v
+			ignoreActors:
+			setLoop:			
+			setCel:			
+			setPri:			
+			posn:				
+			setCycle:		Forward
+			stopUpd:
+			init:
+		)
+

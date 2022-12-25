@@ -1,0 +1,1252 @@
+;**
+;**	Logics for room 84 -- Dr. Nonookee's piano bar
+;**
+;**	Leisure Suit Larry goes "Looking for Love" (in Several Wrong Places)
+;**		by Al Lowe
+;**
+;**	Last Update:	September 28, 1988
+;**
+
+
+(script#				84)
+
+(public
+	rm84				0
+)
+
+
+;(define	vEgoFortress				197)
+	(define	lBalling				0)
+	(define	lUnwinding			1)
+	(define	lMountingLamp		2)
+	(define	lOnLamp				3)
+	(define	lFalling				4)
+	(define	lLanding				5)
+	(define	lHighFive			6)
+
+;(define	vEgoStumbling				198)
+	(define	lStumbling			0)
+	(define	lCrawling			1)
+
+;(define	vFortressInt				817)
+;(define	vDrNonookee					818)
+;(define	vPolyesterPatty			831)
+	(define	lPlaying				0)
+	(define	lArmsFolded			1)
+	(define	lLooking				2)
+	(define	lTalking)
+
+;(define	vLarryOnShoulders			832)
+;(define	vHenchetteStrippers		833)
+;(define	vNonookeeAngel				834)
+;(define	vHandsOhell					835)
+
+
+(define	bulletStart				162 42)
+
+
+(enum												;**	rmScript state values
+	intro
+	feelings1
+	feelings2
+	feelings3
+
+	hereComesLarry
+	atRamp
+	startUnrolling
+	unrolled
+	spinLamp
+	startFall
+	hitsGround
+	turnAndHit
+	computerStart
+	hitComputerEast
+	crawlWestYoungMan
+
+	fireAtWill
+	hit1
+	fire2
+	hit2
+	fire3
+	hit3
+	fire4
+	hit4
+	fire5
+	hit5
+	fire6
+	hit6
+	fire7
+	hit7
+	fire8
+	hit8
+	fire9
+	hit9
+	fire10
+	hit10
+	fire11
+	hit11
+	fire12
+	hit12
+
+	columnFall
+	pianoFlies
+	pianoLands
+	pianoPause
+	youDidIt
+	flyAway
+	noAngel
+	cueTheFlame
+	eatTheDr
+	fireGone
+	standUP
+	youAreFree
+	oneSecond
+
+	awake0
+	undress0
+	awake1 
+	undress1
+	awake2
+	undress2
+	awake3
+	undress3
+	cheers
+	cueRadio
+
+	radioInit
+	crackle
+	crackleAgain
+	hello1
+	hello2
+	hello3
+	hello4
+	hello5
+	toControls
+	toControls2
+	toControls3
+	faceControls
+	heyLarry
+	moveOut1
+	moveOut2
+	moveOut3
+	comeON
+	watchOut
+	nextRoom
+)
+
+
+(instance rm84 of Room
+	(properties
+		picture:		84
+		horizon:		0
+	)
+
+	(method (init)
+
+		(Load VIEW vEgoFortress)
+		(Load VIEW vFortressInt)
+		(Load VIEW vDrNonookee)
+		(Load VIEW vPolyesterPatty)
+		(Load VIEW vLarryOnShoulders)
+		(Load VIEW vHenchetteStrippers)
+		(Load VIEW vNonookeeAngel)
+		(Load VIEW vHandsOhell)
+		(Load VIEW vEgoStumbling)
+		
+;		(Load SOUND mFortress)
+
+		(Load SCRIPT JUMP)
+
+		(super init:)
+
+
+		(self
+			setScript: 		rm84Script
+		)
+
+
+		((View new:)							;**	Piano bench
+			view:				vFortressInt
+			ignoreActors:
+			posn: 			190 117 
+			addToPic:
+		)
+		((View new:)							;**	right rear hand 
+			view: 			vFortressInt
+			ignoreActors:
+			loop:				0
+			cel: 				1
+			posn: 			216 73 
+			setPri:			0
+			addToPic:
+		)
+		((View new:)							;**	left rear hand 
+			view: 			vFortressInt
+			ignoreActors:
+			loop:				0
+			cel: 				2
+			posn: 			103 72 
+			setPri:			0
+			addToPic:
+		)
+		((View new:)							;**	leftHand front 
+			view: 			vFortressInt
+			ignoreActors:
+			loop:				0
+			cel: 				3 
+			posn: 			21 177 
+			setPri:			15
+			addToPic:
+		)
+		((View new:)							;**	telephone table 
+			view: 			vFortressInt
+			ignoreActors:
+			cel: 				4
+			posn: 			60 110 
+			addToPic:
+		)
+
+
+		(aFlames 
+			ignoreActors:
+			setPri:			ltCyan
+			init:
+			stopUpd:
+		)
+		(aComputerWest 
+			ignoreActors:
+			init:
+			stopUpd:
+		)
+		(aComputerEast 
+			ignoreActors:
+			init:
+			stopUpd:
+		)
+		(aLaser 
+			ignoreActors:
+			setPri:			2
+			init:
+			stopUpd:
+		)
+		(aLaserFire 
+			ignoreActors:
+			setPri:			3
+			init:
+		)
+		(aTrapdoor 
+			ignoreActors:
+			setPri:			15
+			init:
+			stopUpd:
+		)
+		(aHench0 
+			ignoreActors:
+			init:
+			stopUpd:
+		)
+		(aHench1 
+			ignoreActors:
+			init:
+			stopUpd:
+		)
+		(aHench2 
+			ignoreActors:
+			init:
+			stopUpd:
+		)
+		(aHench3 
+			ignoreActors:
+			init:
+			stopUpd:
+		)
+		(aPatty 
+			ignoreActors:
+			setCycle:		Forward
+			init:
+		)
+
+
+		(aPiano 
+			setLoop: 		8
+			ignoreActors:
+			setPri:			9
+			init:
+			stopUpd:
+		)
+		(aColumn 
+			setLoop: 		7
+			ignoreActors:
+			init:
+			stopUpd:
+		)
+		(aChandelier 
+			setLoop: 		0 
+			ignoreActors:
+			setPri:			11
+			init:
+			stopUpd:
+		)
+		(aBullet 
+			ignoreActors:
+			setLoop:			6
+			setPri:			15
+			init:
+		)
+		(aNo 
+			ignoreActors:
+			init:
+			stopUpd:
+		)
+
+		(= currentStatus CLOSING_CARTOON)
+		(HandsOff)
+		(ego 
+			view:				vEgoFortress
+			ignoreActors:
+			illegalBits:	0
+			setLoop:			lBalling
+			posn:				0 121
+			setCycle:		Forward
+			setPri:			8
+			setStep:			10 10
+			init:
+		)
+	)
+
+
+	(method (dispose)
+		(sounds eachElementDo: #dispose:)
+		(super dispose:)
+	)
+)
+
+
+(instance aFlames of Prop
+	(properties
+		view:				vHandsOhell
+		loop:				0
+		cel:				0
+		x:					34 
+		y:					131
+	)
+)
+(instance aComputerWest of Prop
+	(properties
+		view:				vFortressInt
+		loop: 			2 
+		cel: 				0
+		x: 				81 
+		y:					81 
+	)
+)
+(instance aComputerEast of Prop
+	(properties
+		view:				vFortressInt
+		loop: 			3 
+		cel: 				0
+		x: 				236 
+		y:					81 
+	)
+)
+(instance aLaser of Prop
+	(properties
+		view:				vFortressInt
+		loop: 			4 
+		cel: 				0
+		x: 				151 
+		y:					45 
+	)
+)
+(instance aLaserFire of Prop
+	(properties
+		view:				vFortressInt
+		loop: 			5
+		cel: 				0
+		x: 				161 
+		y:					1040
+	)
+)
+(instance aTrapdoor of Prop
+	(properties
+		view:				vFortressInt
+		loop: 			1 
+		cel: 				0
+		x: 				294
+		y:					185
+	)
+)
+(instance aHench0 of Prop
+	(properties
+		view:				vHenchetteStrippers
+		loop:				0
+		cel:				0
+		x:					154 
+		y:					113
+	)
+)
+(instance aHench1 of Prop
+	(properties
+		view:				vHenchetteStrippers
+		loop:				1
+		cel:				0
+		x:					168 
+		y:					108
+	)
+)
+(instance aHench2 of Prop
+	(properties
+		view:				vHenchetteStrippers
+		loop:				2
+		cel:				0
+		x:					184 
+		y:					104
+	)
+)
+(instance aHench3 of Prop
+	(properties
+		view:				vHenchetteStrippers
+		loop:				3
+		cel:				0
+		x:					198 
+		y:					100
+	)
+)
+(instance aPatty of Prop
+	(properties
+		view:				vPolyesterPatty
+		loop:				lPlaying
+		x:					206 
+		y:					121
+	)
+)
+(instance aPiano of Actor
+	(properties
+		view:				vFortressInt
+		cel: 				0 
+		x: 				234 
+		y:					125 
+		xStep:			8 
+		yStep:			8
+	)
+)
+(instance aColumn of Actor
+	(properties
+		view:				vFortressInt
+		cel: 				0 
+		x: 				230 
+		y:					26 
+		xStep:			10 
+		yStep:			10
+	)
+)
+(instance aChandelier of Actor
+	(properties
+		view:				vFortressInt
+		cel: 				5 
+		x: 				204 
+		y:					40 
+		xStep:			10 
+		yStep:			10
+	)
+)
+(instance aBullet of Actor
+	(properties
+		view:				vFortressInt
+		illegalBits:	0
+		cel:				0
+		xStep:			22 
+		yStep:			22
+		x:					999 
+		y:					999
+	)
+)
+(instance aNo of Actor
+	(properties
+		view:				vDrNonookee
+		loop:				facingEast
+		x:					86 
+		y:					130
+	)
+)
+
+
+(instance rm84Script of Script
+	(method (doit)
+		(super doit:)
+	)
+
+
+	(method (changeState newState)
+		(switch (= state newState)
+
+			(intro
+				(= seconds 3)
+			)
+
+			(feelings1
+				(Print "As you plummet through the darkness,
+					the evil Dr. Nonookee is enjoying another blissful evening 
+					singing jazz standards at his piano bar..." BIG)
+				(Print "\"Feelings...\"" HIGH)
+				(= cycles 20)
+			)
+
+			(feelings2
+				(Print "\"Nothing more than...\"" HIGH)
+				(= cycles 20)
+			)
+
+			(feelings3
+				(Print "\"Feelings...\"" HIGH)
+				(= cycles 20)
+			)
+
+			(hereComesLarry
+				(Print "Suddenly...! 
+					You explode from the elevator shaft onto the scene..." BIG)
+				(ego
+					setMotion:		MoveTo 155 121 self
+				)
+				(aPatty				
+					setLoop:			lArmsFolded
+					stopUpd:
+				)
+			)
+
+			(atRamp
+				(ego
+					setMotion:		MoveTo 162 94 self
+				)
+			)
+
+			(startUnrolling
+				(ego
+					setLoop:			lUnwinding
+					setCel:			0
+					setCycle:		EndLoop 
+					setStep:			2 12
+					setMotion:		MoveTo 172 35 self
+				)
+			)
+
+			(unrolled
+				(aChandelier		hide:)
+				(ego
+					posn:				204 40
+					setLoop:			lMountingLamp
+					setCel:			0
+					cycleSpeed:		1
+					setCycle:		EndLoop self
+				)
+			)
+
+			(spinLamp
+				(ego
+					setLoop:			lOnLamp
+					setCel:			0
+					setCycle:		Forward
+				)
+				(= cycles 24)
+			)
+
+			(startFall
+				(aChandelier		
+					show:
+					addToPic:
+				)
+				(ego
+					setPri:			RELEASE
+					setLoop:			lFalling
+					setCel:			0
+					setCycle:		Forward
+					cycleSpeed:		0
+					posn:				195 52
+					setStep:			11 11 
+					setMotion:		MoveTo 198 80 self
+				)
+			)
+
+			(hitsGround
+				(ego
+					posn:				196 72
+					setStep:			3 2
+					setLoop:			lLanding
+					setCel:			0
+					setCycle:		EndLoop self
+				)
+			)
+
+			(turnAndHit
+				(ego
+					posn:				198 84
+					setLoop:			lHighFive
+					setCel:			0
+					setCycle:		EndLoop self
+				)
+			)
+
+			(computerStart
+				(Print "Staggering to your feet, 
+					you inadvertently slap a fast low-five on that hand 
+					extending from the wall.
+					Oh, oh!
+					You've discovered the secret activator for the fortress' 
+					Peacemaker Self-Defense Control Panel!" BIG draw:)
+				(aComputerEast
+					setCycle:		EndLoop 
+				)
+				(ego
+					view:				vEgoStumbling
+					posn:				211 84
+					setLoop:			lStumbling
+					setCel:			0
+					setCycle:		EndLoop self
+				)
+			)
+
+			(hitComputerEast
+				(Print "Struggling to regain your balance, 
+					you fall onto the \"Auto-Fire\" button." BIG draw:)
+				(aComputerWest
+					setCycle:		EndLoop self
+				)
+			)
+
+			(crawlWestYoungMan
+				(Print "\"STOP!\" screams Dr. Nonookee." HIGH draw:)
+				(Print "(But, it's too late!)" LOW)
+				(aComputerEast		
+					addToPic:
+				)
+				(aComputerWest		
+					addToPic:
+				)
+				(ego
+					setLoop:			lCrawling
+					setStep:			2 2
+					setCycle:		Walk
+					setMotion:		MoveTo 111 94
+				)
+				(aLaser
+					setCycle:		EndLoop self
+				)
+			)
+
+			(fireAtWill
+				(aLaser				
+					addToPic:
+				)
+				(aLaserFire
+					posn: 			161 40
+					setCycle:		EndLoop
+				)
+				(aBullet
+					posn:				bulletStart
+					setCel:			0
+					setMotion:		MoveTo 277 48 self
+				)
+			)
+
+			(hit1
+				(aBullet
+					setCycle:		EndLoop self
+				)
+			)
+
+			(fire2
+				(aLaserFire
+					cel:				0
+					setCycle:		EndLoop
+				)
+				(aBullet
+					posn:				bulletStart
+					setCel:			0
+					setMotion:		MoveTo 160 4 self
+				)
+			)
+
+			(hit2
+				(aBullet
+					setCycle:		EndLoop self
+				)
+			)
+
+			(fire3
+				(aLaserFire
+					cel:				0
+					setCycle:		EndLoop
+				)
+				(aBullet
+					posn:				bulletStart
+					setCel:			0
+					setMotion:		MoveTo 218 78 self
+				)
+			)
+
+			(hit3
+				(aBullet
+					setCycle:		EndLoop self
+				)
+			)
+
+			(fire4
+				(aLaserFire
+					cel:				0
+					setCycle:		EndLoop
+				)
+				(aBullet
+					posn:				bulletStart
+					setCel:			0
+					setMotion:		MoveTo 283 157 self
+				)
+			)
+
+			(hit4
+				(aBullet
+					setCycle:		EndLoop self
+				)
+			)
+
+			(fire5
+				(aTrapdoor
+					setCycle:		EndLoop
+				)
+				(aLaserFire
+					cel:				0
+					setCycle:		EndLoop
+				)
+				(aBullet
+					posn:				bulletStart
+					setCel:			0
+					setMotion:		MoveTo 119 181 self
+				)
+			)
+
+			(hit5
+				(aBullet
+					setCycle:		EndLoop self
+				)
+			)
+
+			(fire6
+				(aTrapdoor			dispose:)
+				(aLaserFire
+					cel:				0
+					setCycle:		EndLoop
+				)
+				(aBullet
+					posn:				bulletStart
+					setCel:			0
+					setMotion:		MoveTo 33 88 self
+				)
+			)
+
+			(hit6
+				(aBullet
+					setCycle:		EndLoop self
+				)
+			)
+
+			(fire7
+				(aLaserFire
+					cel:				0
+					setCycle:		EndLoop
+				)
+				(aBullet
+					posn:				bulletStart
+					setCel:			0
+					setMotion:		MoveTo 250 10 self
+				)
+			)
+
+			(hit7
+				(aBullet
+					setCycle:		EndLoop self
+				)
+			)
+
+			(fire8
+				(aLaserFire
+					cel:				0
+					setCycle:		EndLoop
+				)
+				(aBullet
+					posn:				bulletStart
+					setCel:			0
+					setMotion:		MoveTo 157 116 self
+				)
+			)
+
+			(hit8
+				(aBullet
+					setCycle:		EndLoop self
+				)
+			)
+
+			(fire9
+				(aLaserFire
+					cel:				0
+					setCycle:		EndLoop
+				)
+				(aBullet
+					posn:				bulletStart
+					setCel:			0
+					setMotion:		MoveTo 31 110 self
+				)
+			)
+
+			(hit9
+				(aBullet
+					setCycle:		EndLoop self
+				)
+			)
+
+			(fire10
+				(aLaserFire
+					cel:				0
+					setCycle:		EndLoop
+				)
+				(aBullet
+					posn:				bulletStart
+					setCel:			0
+					setMotion:		MoveTo 117 15 self
+				)
+			)
+
+			(hit10
+				(aBullet
+					setCycle:		EndLoop self
+				)
+			)
+
+			(fire11
+				(aLaserFire
+					cel:				0
+					setCycle:		EndLoop
+				)
+				(aBullet
+					posn:				bulletStart
+					setCel:			0
+					setMotion:		MoveTo 148 5 self
+				)
+			)
+
+			(hit11
+				(aBullet
+					setCycle:		EndLoop self
+				)
+			)
+
+			(fire12
+				(aLaserFire
+					cel:				0
+					setCycle:		EndLoop
+				)
+				(aBullet
+					posn:				bulletStart
+					setCel:			0
+					setMotion:		MoveTo 221 22 self
+				)
+			)
+
+			(hit12
+				(aBullet
+					setCycle:		EndLoop self
+				)
+			)
+
+			(columnFall
+				(Print "A laser beam strikes the large, Italian marble column 
+					near the grand piano!" BIG)
+				(aLaserFire			
+					posn:				999 999
+				)
+				(aBullet				dispose:)
+				(ego					stopUpd:)
+				(aColumn
+					setCycle:		EndLoop 
+					setMotion:		JumpTo 255 83 self
+				)
+			)
+
+			(pianoFlies
+				(ShakeScreen 1 1)
+				(aPiano
+					setPri:			ltGreen
+					setMotion:		JumpTo 86 140 self
+				)
+			)
+
+			(pianoLands
+				(aNo
+					view:				vNonookeeAngel
+					setLoop:			0
+					setCel:			0
+					setPri:			ltBlue
+					posn:				86 132
+					forceUpd:
+				)
+				(aPiano
+					setPri:			ltGreen
+					setCycle:		EndLoop self
+				)
+				(ShakeScreen 3 2)
+			)
+
+			(pianoPause
+				(aPiano				
+					addToPic:
+				)
+				(= seconds 3)
+			)
+
+			(youDidIt
+				(theGame changeScore: 30)
+				(Print "You did it! You did it, Larry!!
+					You destroyed the evil Dr. Nonookee!!" BIG)
+				(= seconds 4)
+			)
+
+			(flyAway
+				(aNo
+					setCycle:		EndLoop self
+				)
+			)
+
+			(noAngel
+				(aNo
+					setLoop:			1
+					setPri:			ltBrown
+					moveSpeed:		3
+					setStep:			1 1
+					setCycle:		Forward
+					setMotion:		MoveTo 89 112 self
+				)
+			)
+
+			(cueTheFlame
+				(aFlames
+					setCycle:		EndLoop self
+				)
+			)
+
+			(eatTheDr
+				(aNo					dispose:)
+				(aFlames
+					setLoop:			1
+					setCel:			0
+					setCycle:		EndLoop self
+				)
+			)
+
+			(fireGone
+				(aFlames				dispose:)
+				(= seconds 3)
+			)
+
+			(standUP
+				(ego
+					view:				vEgo
+					setLoop:			facingEast
+					setStep:			3 2
+					setLoop:			RELEASE
+				)
+				(= seconds 2)
+			)
+
+			(youAreFree
+				(Print "Remembering that Dr. Nonookee kidnapped and hypnotized 
+					the island's innocent native women, you realize you must
+					break his spell before they can return to the village.
+					\"Snap out of it, girls! 
+					He's gone forever! 
+					Never again will you be forced to do his evil deeds.
+					You are free to return to your native selves.\"" BIG)
+				(Print "\"On the count of three, you will awake refreshed and 
+					able to remember everything that's happened to you.\"" BIG)
+				(= seconds 2)
+			)
+
+			(oneSecond
+				(Print "\"One, two, THREE,\" you shout, snapping your fingers." 
+					BIG)
+				(= seconds 3)
+			)
+
+			(awake0
+				(Print "Freed at last from the hynotic trance of the evil Doctor,
+					the women liberate themselves,
+					resuming their native ways." BIG)
+				(aLaserFire
+					setPri:			14
+					posn:				(- (aHench0 x?) 4) (- (aHench0 y?) 30)
+					setCel:			0
+					setCycle:		EndLoop self
+				)
+			)
+
+			(undress0
+				(aLaserFire
+					posn:				999 999
+				)
+				(aHench0
+					setCycle:		EndLoop self
+				)
+			)
+
+			(awake1 
+				(aHench0				stopUpd:)
+				(aLaserFire
+					posn:				(- (aHench1 x?) 4) (- (aHench1 y?) 30)
+					setCel:			0
+					setCycle:		EndLoop self
+				)
+			)
+
+			(undress1
+				(aLaserFire
+					posn:				999 999
+				)
+				(aHench1
+					setCycle:		EndLoop self
+				)
+			)
+
+			(awake2
+				(aHench1				stopUpd:)
+				(aLaserFire
+					posn:				(- (aHench2 x?) 4) (- (aHench2 y?) 30)
+					setCel:			0
+					setCycle:		EndLoop self
+				)
+			)
+
+			(undress2
+				(aLaserFire
+					posn:				999 999
+				)
+				(aHench2
+					setCycle:		EndLoop self
+				)
+			)
+
+			(awake3
+				(aHench2				stopUpd:)
+				(aLaserFire
+					posn:				(- (aHench3 x?) 4) (- (aHench3 y?) 30)
+					setCel:			0
+					setCycle:		EndLoop self
+				)
+			)
+
+			(undress3
+				(aLaserFire
+					posn:				999 999
+				)
+				(aHench3
+					setCycle:		EndLoop self
+				)
+			)
+
+			(cheers
+				(aHench3				stopUpd:)
+				(Print "\"Huzzah! Huzzah!!\" they shout. 
+					\"It's Larry; Larry Laffer -- OUR HERO!\"" BIG)
+				(Print "You interrupt their celebration with, 
+					\"It's nice of you to say so, 
+					but we must leave here immediately.
+					I had to force the elevator door by dropping a bomb into
+					the volcano and I'm afraid it may erupt at any moment!
+					Where's the radio-telephone?\"" BIG)
+				(Print "\"It's right behind you!\"" HIGH)
+				(Print "\"Oh,\" you counter. \"I knew that.\"" HIGH)
+				(ego
+					setLoop:			RELEASE
+					setMotion:		MoveTo 79 110 self
+				)
+			)
+
+			(cueRadio
+				(ego
+					loop:				facingWest
+					forceUpd:
+				)
+				(= seconds 3)
+			)
+
+			(radioInit
+				(Print "You grab the telephone and press the big
+					\"talk\" button..." BIG)
+				(Print "\"MAYDAY! MAYDAY! This is the Big Laffer calling.
+					Kin I git a copy offn any good buddy?\"" BIG)
+				(Print "(You often slip back into the 70's without even trying!)"
+					LOW)
+				(Print "Catching yourself, you continue,
+					\"I'm inside Nontoonyt Island's volcano;
+					in a fortress hollowed out of solid rock
+					and filled with beautiful, over-sexed women recently
+					stripped to the waist; 
+					I've just killed a maniacial, power-hungry, money-grubbing 
+					scientist who was trying to grab my onklunk;
+					a few minutes ago, I dropped a homemade bomb into a crevice 
+					that will cause the volcano to erupt!\"" BIG)
+				(Print "(Do you realize how stupid you sound?)" LOW)
+				(Print "\"Is anybody listening? Over.\"" HIGH)
+				(= seconds 3)
+			)
+
+			(crackle
+				(Print "\"Hiss.\"" HIGH)
+				(Print "\"Crackle.\"" HIGH)
+				(Print "\"Pop.\"" HIGH)
+				(= seconds 3)
+			)
+
+			(crackleAgain
+				(Print "\"Hiss.\"" HIGH)
+				(Print "\"Crackle.\"" HIGH)
+				(Print "\"Pop.\"" HIGH)
+				(Print "(You almost receive a breakfast cereal commercial.)" LOW)
+				(= seconds 3)
+			)
+
+			(hello1
+				(Print "\"Roger, Big Laffer. We copy.
+					What kind of help do you need? Over.\"" BIG)
+				(= seconds 3)
+			)
+
+			(hello2
+				(Print "\"Hey, who is this? Are you nearby?
+					Can you come immediately? Over.\"" BIG)
+				(= seconds 3)
+			)
+
+			(hello3
+				(Print "\"This is John Williams
+					of 'Software Illustrated' magazine.
+					We're right below you on the beach at Nontoonyt Island,
+					shooting our annual swimsuit issue!
+					We'll be glad to fly up in our helicopter to rescue you!\"" BIG)
+				(Print "\"Is there any way you could create some sort of signal
+					to let me know where you are? Over.\"" BIG)
+				(= seconds 3)
+			)
+
+			(hello4
+				(Print "\"How about if I have some palm trees emit a cloud
+					of fog to surround the island,
+					then turn off the island's main waterfall,
+					and open a gigantic hanger door in the side of the volcano?
+					Over.\"" BIG)
+				(= seconds 3)
+			)
+
+			(hello5
+				(Print "\"Yeah, I guess that ought to do it,\" he replies.
+					\"See you in two minutes. Over and out.\"" BIG)
+				(Print "\"Over and out, good buddy.\"" HIGH)
+				(= cycles 20)
+			)
+
+			(toControls
+				(ego
+					setLoop:			RELEASE
+					setMotion:		MoveTo 93 (ego y?) self
+				)
+			)
+
+			(toControls2
+				(ego
+					setMotion:		MoveTo 93 92 self
+				)
+			)
+
+			(toControls3
+				(ego
+					setMotion:		MoveTo 89 92 self
+				)
+			)
+
+			(faceControls
+				(Print "You have a little trouble deciphering the control panel
+					for the island's camouflage system.
+					\"Anybody know how to work this fog machine?\" you ask." BIG)
+				(Print "Oh, what the hell; pushing everything at least once 
+					couldn't hurt!" BIG)
+				(= seconds 3)
+			)
+
+			(heyLarry
+				(Print "\"Oh, great hero of our island,\" says one of the women,
+					\"come over here. 
+					Allow us to give you a proper, triumphant return to our 
+					people!\"" BIG)
+				(= cycles 20)
+			)
+
+			(moveOut1
+				(ego
+					setMotion:		MoveTo 144 100 self
+				)
+			)
+
+			(moveOut2
+				(aHench0				dispose:)
+				(aHench1				dispose:)
+				(aHench2				dispose:)
+				(aHench3				dispose:)
+				(ego
+					view:				vLarryOnShoulders
+					setLoop:			0
+					setStep:			2 2
+					posn:				176 113
+					setMotion:		MoveTo 102 124 self
+				)
+			)
+
+			(moveOut3
+				(ego
+					setLoop:			1
+					setPri:			14
+					setMotion:		MoveTo 336 192 self
+				)
+				(aPatty
+					setLoop:			lLooking
+				)
+				(Print "\"Say, aren't you coming with us?\" you ask the pianist." 
+					BIG draw:)
+				(Print "\"Of course not,\" she replies,
+					\"I don't really have a part here, I'm just the piano player.
+					But, allow me to introduce myself....\"" BIG)
+				(Print "\"My name is Patty,\" she says, 
+					\"'Polyester Patty,' the internationally-renown recording 
+					artist and queen of the women's singles scene.
+					You'll want to watch for me in 'Leisure Suit Larry III!!'\""
+					BIG)
+				(= cycles 12)
+			)
+
+			(comeON
+				(Print "(You ignore this blatant plug.)" LOW)
+				(Print "\"Come on girls,\" you command, 
+					\"to the chopper... and my destiny!\"" HIGH)
+			)
+
+			(watchOut
+				(Print "\"Hey, watch out!\"")
+				(Print "\"Clumsy!!\"")
+				(Print "\"You dropped him!!!\"")
+				(= seconds 3)
+			)
+
+			(nextRoom
+				(Print "Meanwhile, outside...")
+				(= islandStatus copterComing)
+				(curRoom newRoom: 92)
+			)
+		)
+	)
+)
+

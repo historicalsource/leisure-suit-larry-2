@@ -1,0 +1,6 @@
+					baseSetter:		(= localBS (BassSetter new:))	;**	add to actor
+
+					baseSetter:		0						;**	dispose of BS
+				)
+
+				(if localBS (localBS dispose:))

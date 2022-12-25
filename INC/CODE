@@ -1,0 +1,7 @@
+(instance xxCode of Code
+	(method (doit [str 100])
+		(Format str " Score: %d of %d%15s Rank: %s%10s"
+			(theGame score?) (theGame possibleScore?) " " rank " ")
+	)
+)
+

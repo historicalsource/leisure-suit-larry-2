@@ -1,0 +1,2 @@
+		(SetCursor BIRD  (HaveMouse))		;**	flip off user while do something
+		(SetCursor ARROW (HaveMouse))		;**	return to normal

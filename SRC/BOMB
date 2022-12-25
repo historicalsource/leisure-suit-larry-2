@@ -1,0 +1,38 @@
+    13-Nov-88 05:49 PST
+Sb: LSL2
+Fm: Guruka Singh Khalsa [71500,34]
+
+Now... there's another major problem I'm afraid... not your problem per se
+an SCI problem.  Dig this...  I filled an entire subdirectory with saves
+(was at the airport and got nabbed by Hairy Kirshners with about 240 pts)
+and SCI prompted me for a savegame file to delete and replace with another,
+the dialog window opened asking me to supply a name for the new save and the
+keyboard locked up.  I clicked on OK with the mouse and the window closed,
+disk activity occurred as the file was saved (or so I thought) and upon
+returning to the game I attempted to restore and found my save subdirectory
+EMPTY!  No saves shown at all!  I clicked on 'restore' with no save selected
+and was told "this game saved under a different interpreter -- unable to
+restore game". I Ctrl-Q'd out and looked in the subdirectory from DOS and
+all the save files were there. Restarted the game and sill found NO saved
+games listed at all, and am completely unable to restore anything. This is
+in the final release version!
+ 
+Hooboy... ok, now it's back to the top to start all over again.  I don't
+have the time to do it today so it'll have to wait for later in the week.
+What a drag.  I hope some innocent players don't get bitten by this one
+right near the end of the game.
+ 
+    15-Nov-88 06:54 PST
+Sb: SCI bombout
+Fm: Guruka Singh Khalsa [71500,34]
+
+Al -
+       That bombout during the save/restore in LSL2 was a mess.  I ended up
+with tons of lost clusters. The save files were munged terribly. I ran a
+string filter on one of the .CHK files that chkdsk recovered and am sending
+it to you via Plex as BOMBOUT.ARC I'm sure the contents will look familiar
+to you. Hope COMDEX is fun!
+ 
+.....G
+
+

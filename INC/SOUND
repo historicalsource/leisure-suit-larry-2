@@ -1,0 +1,11 @@
+(instance theSound of Sound
+	(properties
+	 	number:		
+		loop:			1
+	)
+)
+
+		(Load SOUND )
+		(theSound 	init:)
+
+				(theSound		play:)

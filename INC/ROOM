@@ -1,0 +1,98 @@
+;**
+;**	Logics for room xx --
+;**
+;**	Leisure Suit Larry goes "Looking for Love" (in Several Wrong Places)
+;**		by Al Lowe
+;**
+;**	Last Update:	August 15, 1988
+;**
+
+
+(script#				xx)
+
+(public
+	rmxx				0
+)
+
+(define	starter	1)
+
+(local
+	work
+	a1
+	a2
+	a3
+)
+
+
+(enum												;**	rmxxScript state values
+	intro
+)
+
+
+(instance rmxx of Room
+	(properties
+		picture:		xx
+		horizon:		5
+		north:		11
+		south:		12
+		east:			13
+		west:			14
+	)
+
+	(method (init)
+;**			(Load VIEW )
+;**			(Load VIEW )
+;**			(Load SOUND )
+
+		(super init:)
+
+		(self
+			setRegions:		rgAirport
+			setScript: 		rmxxScript
+		)
+
+		(cond
+			((== prevRoomNum 101)		 (ego posn: 159  51))
+			((== prevRoomNum 102)		 (ego posn: 159 186))
+			(else								 (ego posn: 159 186))
+		)
+
+		(NormalEgo)
+		(ego					init:)
+	)
+)
+
+
+(instance rmxxScript of Script
+	(method (doit)
+		(super doit:)
+
+;**			(if (& (ego onControl:) cBlue)
+;**				(curRoom newRoom: )
+;**			)
+	)
+
+
+	(method (handleEvent event)
+		(if (or	(!= (event type?) saidEvent) (event claimed?)) (return))
+
+		(if (Said 'look>')
+			(if (Said '[/room]')
+				(Print "
+					Looking around, you see a room.
+					")
+			)
+		)
+	)
+
+
+	(method (changeState newState &tmp [str 255])
+		(switch (= state newState)
+
+			(intro
+				(= seconds 3)
+			)
+		)
+	)
+)
+

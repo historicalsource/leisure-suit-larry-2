@@ -1,0 +1,21 @@
+
+
+
+Copy LL2\rm099.sc; and make it your Restart: room.  In it, change the newRoom
+to YOUR real startup room.
+
+
+
+Get ll2\view\view.998 and use it for the speed checking view (replace vGarage)
+
+
+
+
+Speed test results, in doit loop only, no script:
+	90	= Dell         386-16mh
+	45 = Standard     286-10mh
+	37 = Tandy 1000TX	286-8mh
+	34 = Tandy 3000   286-8mh
+	15 = Dell in mode8088-4.7mh
+	14 = Tandy 1000EX 8086
+

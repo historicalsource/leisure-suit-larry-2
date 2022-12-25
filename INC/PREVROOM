@@ -1,0 +1,6 @@
+		(cond
+			((== prevRoomNum   0)		(ego posn:  99 166))
+			((== prevRoomNum  17)		(ego posn: 198 188))
+			(else								(ego posn: 198 188))
+		)
+

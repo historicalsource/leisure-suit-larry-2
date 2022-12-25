@@ -1,0 +1,1819 @@
+;**
+;**	Vocabulary List
+;**
+;**	Leisure Suit Larry goes "Looking for Love" (in Several Wrong Places)
+;**		by Al Lowe
+;**
+;**	Last Update:	October 25, 1988
+;**
+
+
+(0001 look					verb)
+(0001 read					verb)
+(0001 examine				verb)
+(0001 inspect				verb)
+(0001 observe				verb)
+(0001 display				noun verb)
+(0001 view					verb noun)
+(0001 see					verb)
+(0001 stare					verb)
+(0001 show					noun verb)
+;**	"tv show"
+
+(0002 enter					verb)
+(0002 go						auxv verb)
+(0002 board					noun verb)
+(0002 ride					verb noun)
+
+(0003 get					verb)
+(0003 take					verb)
+(0003 pick					verb)
+(0003 acquire				verb)
+(0003 gather				verb)
+(0003 catch					verb)
+(0003 capture				verb)
+
+(0004 climb					verb)
+
+(0005 console				noun)
+(0005 panel					noun)
+
+(0006 control				verb noun)
+(0006 dial					noun verb)
+(0006 meter					noun)
+(0006 gauge					noun)
+
+(0007 leave					verb)
+(0007 exit					verb noun)
+(0007 disembark			verb)
+(0007 walk					verb noun)
+
+(0008 instrument			noun)
+(0008 drum					noun)
+(0008 amp					noun)
+(0008 amplifier			noun)
+
+(0009 tree					noun)
+(0009 palm					noun)
+
+(0010 plant					noun verb)
+(0010 bush					noun)
+(0010 weed					noun)
+(0010 shrub					noun)
+(0010 paln					noun)
+(0010 cactus				noun)
+(0010 vegetation			noun)
+(0010 foliage				noun)
+(0010 planter				noun)
+
+(0011 talk					verb)
+(0011 speak					verb)
+(0011 converse				verb)
+(0011 call					verb)
+
+(0012 find					verb)
+(0012 locate				verb)
+(0012 search				verb)
+(0012 explore				verb)
+(0012 frisk					verb)
+
+(0013 open					verb)
+
+(0014 break					verb)
+(0014 smash					verb)
+(0014 destroy				verb)
+(0014 damage				verb)
+(0014 shatter				verb)
+(0014 tear					verb)
+(0014 rip					verb)
+(0014 bust					verb)
+
+(0015 sierra				noun)
+
+(0016 door					noun)
+(0016 doorway				noun)
+(0016 gate					noun)
+
+(0017 close					verb)
+(0017 shut					verb)
+
+(0018 suit					noun)
+(0018 cloth					noun)
+(0018 clothes				noun)
+(0018 garment				noun)
+(0018 pocket				noun verb)
+(0018 outfit				noun)
+(0018 coat					noun)
+(0018 pants					noun)
+(0018 pair					noun)
+(0018 panties				noun)
+(0018 underpants			noun)
+(0018 underwear			noun)
+(0018 bra					noun)
+(0018 stockings			noun)
+(0018 nylons				noun)
+(0018 lingerie				noun)
+
+(0019 floor					noun)
+(0019 ground				noun)
+(0019 grass					noun)
+(0019 gangplank			noun)
+(0019 ramp					noun)
+(0019 walkway				noun)
+(0019 jetway				noun)
+(0019 catwalk				noun)
+(0019 sidewalk				noun)
+(0019 earth					noun)
+(0019 curb					noun)
+(0019 gutter				noun)
+(0019 rug					noun)
+(0019 carpet				noun)
+(0019 mat					noun)
+
+(0020 yell					verb)
+(0020 scream				verb)
+(0020 shout					verb)
+(0020 holler				verb)
+
+(0021 work					verb)
+(0021 duty					verb)
+
+(0022 use					verb)
+(0022 apply					verb)
+
+(0023 ego					noun)
+
+(0024 inventory			verb noun)
+(0024 inven					verb noun)
+(0024 inv					verb noun)
+(0024 thing					noun)
+(0024 item					noun)
+(0024 object				noun)
+(0024 all					noun)
+(0024 belonging			noun)
+(0024 sundries				noun)
+(0024 everything			noun)
+(0024 junk					noun)
+
+(0025 rock					noun verb)
+(0025 stone					noun)
+(0025 boulder				noun)
+
+(0026 memory				noun)
+
+(0027 hole					noun)
+(0027 knothole				noun)
+(0027 opening				noun verb)
+
+(0028 push					verb)
+(0028 pull					verb)
+(0028 jerk					verb)
+(0028 press					verb)
+(0028 shove					verb)
+(0028 move					verb)
+(0028 roll					verb noun)
+(0028 turn					verb)
+(0028 replace				verb)
+
+(0029 paint					noun verb)
+(0029 picture				noun)
+(0029 poster				noun)
+(0029 art					noun)
+(0029 artwork				noun)
+(0029 calender				noun)
+(0029 calendar				noun)
+(0029 carving				noun)
+(0029 statue				noun)
+(0029 sculpture			noun)
+(0029 mannequin			noun)
+
+(0030 give					verb)
+(0030 offer					verb)
+
+(0031 launch				verb noun)
+(0031 boat					noun)
+(0031 lifeboat				noun)
+(0031 dinghy				noun)
+
+(0032 ship					noun verb)
+(0032 craft					noun)
+(0032 vessel				noun)
+(0032 vehicle				noun)
+(0032 harbor				noun)
+
+(0033 button				noun verb)
+(0033 knob					noun)
+
+(0034 switch				noun verb)
+(0034 lever					noun)
+(0034 timer					noun)
+(0034 ripcord				noun)
+(0034 cord					noun)
+(0034 handle				noun)
+
+(0035 body					noun)
+
+(0036 remove				verb)
+(0036 empty					verb)
+(0036 drain					verb)
+(0036 spill					verb)
+(0036 pour					verb)
+
+(0037 blow					verb)
+
+(0038 kill					verb)
+(0038 murder				verb)
+(0038 attack				verb)
+(0038 hit					verb)
+(0038 kick					verb)
+(0038 strike				verb)
+(0038 punch					verb)
+(0038 slap					verb)
+(0038 fight					verb)
+(0038 beat					verb)
+(0038 hurt					verb)
+(0038 pound					verb)
+(0038 stab					verb)
+
+(0039 me						pron)
+(0039 i						pron)
+(0039 im						pron)
+(0039 self					noun)
+(0039 yourself				noun)
+(0039 myself				noun)
+(0039 larry					noun)
+(0039 laffer				noun)
+
+(0040 man					noun)
+(0040 guy					noun)
+(0040 boy					noun)
+(0040 crewman				noun)
+(0040 worker				noun)
+(0040 barber				noun)
+(0040 hairy					noun)
+(0040 reams					noun)
+(0040 bum					noun)
+(0040 dude					noun)
+(0040 surfer				noun)
+(0040 drunk					noun)
+(0040 wino					noun)
+(0040 passenger			noun)
+(0040 maitre				noun)
+(0040 d						noun)
+(0040 bore					noun)
+(0040 ken					noun)
+(0040 captain				noun)
+(0040 sailor				noun)
+
+(0041 he						pron)
+(0041 him					pron)
+(0041 his					pron)
+
+(0042 woman					noun)
+(0042 girl					noun)
+(0042 lady					noun)
+(0042 stewardess			noun)
+(0042 blond					noun)
+(0042 chick					noun)
+(0042 blonde				noun)
+(0042 slut					noun)
+(0042 broad					noun)
+(0042 bimbo					noun)
+(0042 maid					noun)
+(0042 receptionist		noun)
+(0042 secretary			noun)
+(0042 mother				noun)
+(0042 mama					noun)
+(0042 momma					noun)
+(0042 mom					noun)
+
+(0043 she					pron)
+(0043 her					pron)
+
+(0044 mirror				noun verb)
+
+(0045 tp						verb)
+
+(0046 million				noun)
+
+(0047 forest				noun)
+(0047 woods					noun)
+(0047 jungle				noun)
+
+(0048 stick					noun verb)
+
+(0049 key					noun)
+
+(0050 clerk					noun)
+(0050 waiter				noun)
+(0050 waitress				noun)
+(0050 bartender			noun)
+(0050 storekeeper			noun)
+(0050 shopkeeper			noun)
+(0050 agent					noun)
+(0050 kgb					noun)
+(0050 kgbishna				noun)
+(0050 custom				noun)
+(0050 attendant			noun)
+(0050 shark					noun)
+
+(0051 fast					verb adj)
+(0051 quick					verb adj)
+
+(0052 slow					verb adj)
+
+(0053 normal				noun verb adj)
+
+(0054 light					noun verb)
+(0054 lite					noun verb)
+(0054 lamp					noun)
+(0054 candle				noun)
+(0054 ignite				verb)
+(0054 burn					verb)
+(0054 trapeze				noun)
+(0054 stoplight			noun)
+
+(0055 eat					verb)
+(0055 consume				verb)
+(0055 taste					verb)
+(0055 swallow				verb)
+(0055 round					verb)
+(0055 lick					verb)
+(0055 suck					verb)
+(0055 bite					verb)
+
+(0056 part					noun)
+(0056 piece					noun)
+
+(0057 machine				noun)
+(0057 dispenser			noun)
+
+(0058 room					noun)
+(0058 pier					noun)
+(0058 dock					noun)
+(0058 park					noun)
+(0058 area					noun)
+(0058 scene					noun)
+(0058 vicinity				noun)
+(0058 bedroom				noun)
+(0058 airport				noun)
+(0058 lounge				noun)
+(0058 bridge				noun)
+
+(0059 hall					noun)
+(0059 hallway				noun)
+(0059 corridor				noun)
+
+(0060 throw					verb)
+(0060 toss					verb)
+(0060 cast					verb)
+(0060 hurl					verb)
+(0060 spread				verb)
+(0060 sprinkle				verb)
+(0060 sling					verb)
+(0060 flip					verb)
+
+(0061 drop					verb)
+(0061 set					verb)
+(0061 put					verb)
+(0061 place					noun verb)
+(0061 stuff					verb)
+(0061 stash					verb noun)
+(0061 hide					verb noun)
+(0061 conceal				verb noun)
+(0061 discard				verb)
+
+(0062 cut					verb noun)
+(0062 slice					verb noun)
+(0062 sever					verb)
+
+(0063 wad					noun verb)
+
+(0064 fissure				noun)
+(0064 valley				noun)
+(0064 chasm					noun)
+(0064 canyon				noun)
+(0064 gorge					noun)
+(0064 crevice				noun)
+
+(0065 status				noun verb)
+
+(0066 pause					verb)
+
+(0067 test					verb)
+
+(0068 kiss					verb noun)
+(0068 hug					verb noun)
+(0068 embrace				verb noun)
+
+(0069 blue					adj)
+
+(0070 quit					verb)
+(0070 stop					verb)
+(0070 done					verb)
+
+(0071 position				noun verb)
+
+(0072 bye					verb)
+(0072 goodbye				verb)
+
+(0073 freeway				noun)
+(0073 street				noun)
+(0073 road					noun)
+(0073 highway				noun)
+
+(0074 garbage				noun)
+(0074 trash					noun)
+(0074 barrel				noun)
+(0074 litter				noun)
+(0074 refuse				verb noun)
+(0074 can					noun)
+(0074 bin					noun)
+(0074 rubbish				noun)
+(0074 dumpster				noun)
+
+(0075 escape				noun verb)
+
+(0076 scratch				verb)
+
+(0077 hatch					noun)
+
+(0078 window				noun)
+(0078 porthole				noun)
+(0078 glass					noun)
+(0078 pane					noun)
+(0078 cup					noun)
+
+(0079 restart				verb)
+
+(0080 port					noun)
+
+(0081 chain					noun)
+(0081 handcuff				noun)
+(0081 whip					noun)
+(0081 unmentionable		noun)
+
+(0082 garage				noun)
+
+(0083 harness				verb noun)
+(0083 buckle				verb noun)
+(0083 strap					verb noun)
+
+(0084 smell					verb noun)
+(0084 sniff					verb)
+
+(0085 hut					noun)
+(0085 shack					noun)
+
+(0086 screen				noun)
+(0086 monitor				noun)
+(0086 computer				noun)
+(0086 terminal				noun)
+
+(0087 food					noun)
+(0087 meal					noun)
+(0087 cheese				noun)
+(0087 brie					noun)
+(0087 appetizer			noun)
+
+(0088 bird					noun)
+(0088 gull					noun)
+(0088 seagull				noun)
+(0088 parrot				noun)
+
+(0089 deck					verb noun)
+
+(0090 rob					verb)
+(0090 swipe					verb)
+(0090 steal					verb)
+
+(0091 conveyor				noun)
+(0091 belt					noun)
+(0091 seatbelt				noun)
+
+(0092 sink					noun verb)
+(0092 basin					noun)
+
+(0093 thicket				noun)
+
+(0094 fern					noun)
+
+(0095 container			noun)
+
+(0096 condom				noun)
+(0096 rubber				noun)
+(0096 prophylactic		noun)
+(0096 lubber				noun)
+(0096 protection			noun)
+(0096 sheath				noun)
+
+(0097 shelf					noun)
+(0097 rack					noun)
+
+(0098 cart					noun)
+
+(0099 umbrella				noun)
+
+(0100 captor				noun)
+
+(0101 snow					noun)
+(0101 ice					noun)
+(0101 glacier				noun)
+
+(0102 left					adj)
+
+(0103 right					adj)
+
+(0104 curtain				noun)
+
+(0105 grid					noun)
+
+(0106 wait					verb)
+
+(0107 insert				verb)
+
+(0108 fill					verb)
+
+(0109 menu					noun)
+
+(0110 moon					noun)
+
+(0111 lie					noun verb)
+
+(0112 special				noun)
+
+(0113 hull					noun)
+
+(0114 bed					noun)
+(0114 blanket				noun)
+(0114 sheet					noun)
+
+(0115 stair					noun)
+(0115 stairway				noun)
+(0115 step					noun verb)
+
+(0116 confetti				noun)
+(0116 ribbon				noun)
+(0116 streamer				noun)
+
+
+(0117 wall					noun)
+(0117 brick					noun)
+
+(0118 play					verb)
+(0118 solve					verb)
+
+(0119 reset					verb)
+
+(0120 counter				noun)
+(0120 table					noun)
+(0120 buffet				noun)
+(0120 desk					noun)
+
+(0121 wake					verb)
+(0121 waken					verb)
+(0121 awaken				verb)
+
+(0122 circle				noun verb)
+
+(0123 rub					verb)
+(0123 stroke				verb)
+(0123 pat					verb)
+(0123 polish				verb)
+(0123 pet					verb)
+(0123 touch					verb)
+(0123 feel					verb)
+(0123 poke					verb)
+(0123 caress				verb)
+(0123 fondle				verb)
+(0123 pinch					verb)
+
+(0124 who					adv)
+(0124 what					adv)
+(0124 when					adv)
+(0124 where					adv)
+(0124 wheres				adv)
+;**	where's
+(0124 why					adv)
+(0124 how					adv)
+
+(0125 is						auxv verb)
+(0125 be						auxv verb)
+(0125 are					auxv verb)
+(0125 am						auxv verb)
+
+(0126 quiet					noun verb)
+
+(0127 name					noun verb)
+
+(0128 cash					noun)
+(0128 money					noun)
+(0128 dough					noun)
+(0128 credit				noun)
+(0128 currency				noun)
+(0128 buck					noun)
+(0128 dollar				noun)
+(0128 coin					noun)
+(0128 hundred				noun)
+
+(0129 load					verb noun)
+
+(0130 landscape			noun)
+(0130 landscaping			noun)
+(0130 vine					noun)
+
+(0131 save					verb)
+(0131 rescue				verb adj)
+
+;So that we recognize names from previous game
+(0132 lefty					noun)
+(0132 faith					noun)
+(0132 fawn					noun)
+(0132 eve					noun)
+(0132 hooker				noun)
+
+(0133 cliff					noun)
+
+(0134 game					noun)
+
+(0135 restore				verb)
+
+(0136 dig					verb)
+
+(0137 hello					verb noun)
+(0137 hi						verb noun)
+
+(0138 knock					verb)
+(0138 bang					verb)
+
+(0139 dive					verb)
+
+(0140 follow				verb)
+
+(0141 sit					verb)
+(0141 rest					verb)
+(0141 bath					noun)
+
+(0142 fly					verb noun)
+
+(0143 leisure				adj)
+
+(0144 your					adj)
+(0144 youre					adj)
+
+(0145 release				verb)
+(0145 free					verb adj)
+(0145 untie					verb)
+(0145 unfasten				verb)
+
+(0146 rope					noun verb)
+
+(0146 swim					noun verb)
+(0146 bathing				noun verb)
+
+(0147 my						adj)
+
+(0148 bark					noun verb)
+
+(0149 swing					verb noun)
+
+(0150 yes					verb)
+(0150 yep					verb)
+(0150 y						verb)
+(0150 ok						verb)
+(0150 sure					verb)
+
+(0151 no						verb)
+(0151 n						verb)
+
+(0152 buy					verb)
+(0152 purchase				verb)
+(0152 request	 			verb)
+(0152 order					verb)
+(0152 pay					verb)
+(0152 spend					verb)
+
+(0153 fire					verb noun)
+(0153 flame					noun)
+(0153 campfire				noun)
+(0153 fireplace			noun)
+
+(0154 camp					noun)
+(0154 village				noun)
+(0154 town					noun)
+(0154 city					noun)
+(0154 angeles				noun)
+
+(0155 los					adj)
+
+(0156 back					noun)
+(0156 behind				noun)
+(0156 rear					noun)
+
+(0158 point					verb noun)
+(0158 aim					verb noun)
+
+(0159 let					verb)
+
+(0160 root					noun)
+						 
+(0161 growth				noun)
+
+(0162 car					noun)
+(0162 auto					noun)
+(0162 automobile			noun)
+(0162 traffic				noun)
+
+(0163 waterfall			noun)
+(0163 falls					noun)
+(0163 cascade				noun)
+(0163 rapids				noun)
+
+(0164 them					pron)
+
+(0165 both					adj)
+
+(0166 you					noun)
+
+(0167 drawer				noun)
+(0167 furniture			noun)
+(0167 dresser				noun)
+(0167 bureau				noun)
+(0167 trunk					noun)
+(0167 chest					noun)
+;**	this is a syn for chest:
+(0167 waist					noun)
+
+(0169 swamp					noun)
+(0169 bog					noun)
+
+(0170 jump					verb)
+(0170 leap					verb)
+(0170 hop					verb)
+(0170 skip					verb)
+
+(0171 priority				noun)
+
+(0172 sky					noun)
+(0172 sun					noun)
+(0172 cloud					noun)
+
+(0173 listen				verb)
+(0173 hear					verb)
+
+(0174 fasten				verb)
+(0174 attach				verb)
+(0174 tie					verb)
+(0174 secure				verb adj)
+(0174 afix					verb)
+
+(0175 love					verb noun)
+(0175 enjoy					adj)
+(0175 like					adj)
+
+(0176 dirt					noun)
+(0176 soil					noun)
+(0176 dune					noun)
+(0176 dust					noun)
+
+(0177 up						pos)
+
+(0178 down					pos)
+
+(0179 ceiling				noun)
+(0179 roof					noun)
+
+(0180 box					noun)
+(0180 case					noun)
+(0180 crate					noun)
+
+(0181 suitcase				noun)
+(0181 package				noun)
+(0181 luggage				noun)
+(0181 baggage				noun)
+
+(0182 rail					noun)
+(0182 railing				noun)
+(0182 balcony				noun)
+
+(0183 closet				noun)
+(0183 cabinet				noun)
+(0183 cupboard				noun)
+(0183 wardrobe				noun)
+
+(0184 antenna				noun)
+(0184 transmitter			noun)
+(0184 satellite			noun)
+
+(0185 edge					noun)
+
+(0186 hand					noun verb)
+(0186 finger				noun)
+(0186 ring					noun)
+
+(0187 knife					noun)
+(0187 gun					noun)
+(0187 pistol				noun)
+(0187 weapon				noun)
+
+(0188 seat					noun)
+(0188 chair					noun)
+(0188 bench					noun)
+(0188 stool					noun)
+(0188 barstool				noun)
+(0188 sofa					noun)
+(0188 couch					noun)
+(0188 seatback				noun)
+
+(0189 fix					verb)
+(0189 repair				verb)
+
+(0190 label					noun)
+(0190 instruction			noun)
+
+(0191 print					verb)
+(0191 write					verb)
+(0191 mark					verb)
+
+(0192 breathe				verb)
+(0192 inhale				verb)
+
+(0193 liquid				noun)
+(0193 fluid					noun)
+(0193 water					noun)
+(0193 pool					noun)
+
+(0194 breath				noun)
+
+(0195 animal				noun)
+(0195 creature				noun)
+(0195 anaconda				noun)
+(0195 snake					noun)
+
+(0196 bar					noun)
+(0196 tavern				noun)
+(0196 saloon				noun)
+(0196 scurvy				noun)
+(0196 leftys				noun)
+
+(0197 undress				verb)
+(0197 strip					verb)
+(0197 unclothe				verb)
+(0197 naked					verb adj)
+(0197 nude					verb)
+
+(0198 start					noun verb)
+(0198 begin					noun verb)
+
+(0199 hold					verb)
+(0199 grab					verb)
+(0199 grip					verb)
+(0199 carry					verb)
+(0199 reach					verb)
+(0199 grasp					verb)
+
+(0200 block					noun verb)
+
+(0201 clock					noun verb)
+
+(0202 change				verb noun)
+(0202 alter					verb noun)
+
+(0203 string				noun verb)
+
+(0204 mouth					noun)
+(0204 teeth					noun)
+(0204 lip					noun)
+(0204 smile					noun)
+
+(0205 run					verb)
+
+(0206 head					noun)
+
+(0207 sleep					verb)
+(0207 nap					verb)
+
+(0208 return				verb)
+
+(0209 cabin					noun)
+
+(0210 lock					verb noun)
+(0210 padlock				verb noun)
+(0210 latch					verb noun)
+(0210 bolt					verb noun)
+
+(0211 unlock				verb)
+(0211 unlatch				verb)
+(0211 unbolt				verb)
+
+(0212 leg					noun)
+(0212 ankle					noun)
+(0212 thigh					noun)
+(0212 calf					noun)
+
+(0213 face					noun verb)
+(0213 eye					noun)
+(0213 ear					noun)
+(0213 nose					noun)
+(0213 skin					noun verb)
+
+(0214 next					adj)
+
+(0215 path					noun)
+(0215 trail					noun)
+
+(0216 ledge					noun)
+
+(0217 spit					verb noun)
+(0217 expectorate			verb noun)
+
+(0218 hang					verb)
+
+(0219 say					auxv verb)
+(0219 do						auxv verb)
+
+(0220 ask					verb)
+(0220 tell					verb)
+
+(0221 one					noun)
+(0222 two					noun)
+(0223 three					noun)
+(0224 four					noun)
+(0225 five					noun)
+(0226 six					noun)
+(0227 seven					noun)
+(0228 eight					noun)
+(0229 nine					noun)
+
+(0230 raise					verb)
+(0230 lift					verb)
+(0230 increase				verb)
+
+(0231 lower					verb adj)
+(0231 decrease				verb adj)
+
+(0232 underwater			noun) 
+
+(0233 landing				noun)
+
+(0234 camera				noun)
+
+(0235 tv						noun)
+(0235 studio				noun)
+(0235 krod					noun)
+(0235 station				noun)
+(0235 television			noun)
+
+(0236 haircut				noun)
+
+(0237 hair					noun)
+
+(0238 plate					noun)
+(0238 pate					noun)
+
+(0239 large					adj)
+
+(0240 different			adj)
+(0240 other					noun)
+
+(0241 clean					verb adj)
+(0241 wash					verb adj)
+(0241 rinse					verb)
+
+(0242 hill					noun)
+(0242 plateau				noun)
+(0242 mesa					noun)
+(0242 volcano				noun)
+(0242 mountain				noun)
+(0242 hollywood			noun)
+
+(0243 top					noun)
+(0243 lid					noun)
+
+(0244 insurance			noun)
+
+(0245 log					noun verb)
+(0245 wood					noun verb)
+
+(0246 wick					noun)
+
+(0247 air					noun)
+(0247 atmosphere			noun)
+
+(0248 smoke					verb noun)
+(0248 steam					verb noun)
+(0248 smog					noun)
+(0248 cigarette			noun)
+
+(0249 ash					noun)
+
+(0250 overhead				noun)
+
+(0251 stout					adj)
+
+(0252 bill					noun)
+(0252 tab					noun)
+
+(0253 now					adv)
+
+(0254 another				adj)
+
+(0255 please				adv verb)
+
+(0256 this					adj pron)
+(0256 these					adj pron)
+(0256 those					adj pron)
+(0256 that					adj pron)
+
+(0257 some					adj pron)
+
+(0258 every					adj)
+
+(0259 guess					verb noun)
+
+(0260 out					pos)
+(0260 outer					pos)
+(0260 outside				pos)
+(0260 off					pos)
+
+(0261 old					adj)
+(0261 used					adj)
+
+(0262 an						art)
+(0262 a						art)
+(0262 the					art)
+
+(0263 of						ass)
+
+(0264 we						pron)
+(0264 us						pron)
+
+(0265 to						pos ass)
+
+(0266 little				adj)
+(0266 small					adj)
+(0266 tiny					adj)
+
+(0267 with					ass)
+(0267 using					ass)
+
+(0268 from					ass)
+
+(0269 over					pos)
+
+(0270 cockpit				noun)
+
+(0271 sir					noun)
+
+(0272 for					ass conj)
+
+(0273 will					noun)
+
+(0274 it						pron)
+
+(0275 flashing				adj)
+
+(0276 big					adj)
+
+(0277 around				pos)
+
+(0278 and					conj)
+
+(0279 but					conj)
+
+(0280 or						conj)
+
+(0281 either				conj)
+
+(0282 neither				conj)
+
+(0283 nor					conj)
+
+(0284 mine					noun verb)
+
+(0285 at						pos)
+
+(0286 near					pos)
+
+(0287 would					pos)
+
+(0288 here					pos)
+
+(0289 there					pos)
+
+(0290 everywhere			pos)
+
+(0291 below					pos)
+(0291 beneath				pos)
+(0291 under					pos)
+
+(0292 far					pos)
+
+(0293 across				pos)
+
+(0294 above					pos)
+
+(0295 between				pos)
+
+(0296 through				pos)
+
+(0297 into					pos)
+(0297 in						pos)
+(0297 inside				pos)
+
+(0298 onto					pos)
+(0298 on						pos)
+
+(0299 restaurant			noun)
+(0299 cafe					noun)
+
+(0300 leaf					noun)
+(0300 leaves				noun)
+
+(0301 branch				noun)
+(0301 limb					noun)
+
+(0302 brew					noun verb)
+
+(0302 help					noun verb)
+(0302 aid					noun verb)
+(0302 assist				noun verb)
+(0302 hint					noun verb)
+
+(0303 wear					verb)
+
+(0304 feed					verb)
+
+(0305 crawl					verb)
+
+(0306 ocean					noun)
+(0306 lagoon				noun)
+(0306 sea					noun)
+(0306 surf					noun verb)
+(0306 wave					noun verb)
+(0306 shake					verb)
+
+(0307 chief					noun)
+(0307 keneewauwau			noun)
+(0307 leader				noun)
+
+(0308 cave					noun)
+(0308 cavern				noun)
+(0308 grotto				noun)
+
+(0309 chamber				noun)
+
+
+
+;**	LL2 words start here:
+
+(0500 bikini				noun)
+
+(0501 bottom				noun)
+
+(0502 grotesque 			adj)
+
+(0503 dip					noun)
+(0503 bread					noun)
+(0503 snack					noun)
+
+(0504 sand					noun)
+(0504 beach					noun)
+
+(0505 nothing				noun)
+
+(0506 ticket				noun)
+
+(0507 lottery				noun)
+(0507 lotto					noun)
+(0507 lucko					noun)
+(0507 bucko					noun)
+
+(0508 cruise				noun)
+
+(0509 passport				noun)
+
+(0510 people				noun)
+(0510 couple				noun)
+(0510 native				noun)
+(0510 person				noun)
+(0510 jogger				noun)
+(0510 children				noun)
+(0510 kid					noun)
+(0510 customer				noun)
+(0510 patron				noun)
+
+(0511 grocery				noun)
+(0511 store					noun)
+(0511 drugstore			noun)
+(0511 building				noun verb)
+(0511 shop					noun verb)
+(0511 shoppe				noun)
+(0511 home					noun)
+(0511 house					noun)
+(0511 mart					noun)
+(0511 quikimart			noun)
+(0511 business				noun)
+(0511 derby					noun)
+
+(0512 swimsuit				noun)
+(0512 job					noun)
+
+(0513 sunscreen			noun)
+(0513 lotion				noun)
+
+(0514 onklunk				noun)
+
+(0515 fruit					noun)
+(0515 basket				noun)
+
+(0516 bowl					noun)
+(0516 dish					noun)
+
+(0517 kit					noun)
+
+(0518 wig					noun)
+
+(0519 soap					noun verb)
+
+(0520 match					noun verb)
+(0520 matches				noun)
+(0520 matchbook			noun)
+
+(0522 tag					noun)
+
+(0523 pin					noun)
+(0523 hairpin				noun)
+(0523 bobbypin				noun)
+
+(0524 parachute			noun)
+
+(0525 pamphlet				noun)
+(0525 tract					noun)
+
+(0526 religious			adj)
+
+(0527 bag					noun verb)
+
+(0528 airsick				adj)
+
+(0529 tonic					noun)
+(0529 rejuvenator			noun)
+
+(0530 bobby					adj)
+
+(0531 bottle				noun)
+(0531 jar					noun)
+
+(0532 plane					noun)
+(0532 jet					noun)
+(0532 airplane				noun)
+(0532 airline				noun)
+(0532 flight				noun)
+(0532 helicopter			noun)
+(0532 copter				noun)
+(0532 chopper				noun)
+
+(0533 gulp					noun)
+(0533 cola					noun)
+(0533 soda					noun)
+(0533 coke					noun)
+(0533 pop					noun)
+
+(0534 smoker				noun)
+
+(0535 forceatest			verb)
+
+(0536 speed					noun)
+
+(0537 galley				noun)
+(0537 kitchen				noun)
+
+(0538 new					adj)
+
+(0538 stand					verb noun)
+(0538 nightstand			noun)
+(0538 nighttable			noun)
+(0538 rise					verb)
+
+(0540 emergency			noun)
+
+(0541 convenience			adj)
+(0541 quiki					adj)
+(0541 quikie				adj)
+(0541 quickie				adj)
+(0541 quicky				adj)
+
+(0542 sew					adj verb)
+
+(0543 flower				noun)
+
+(0544 movie					noun)
+(0544 film					noun)
+
+(0545 world					noun)
+
+(0545 whole					adj)
+
+(0546 cheat					noun verb)
+
+(0547 vomit					verb)				
+(0547 barf					verb)				
+
+(0548 elevator				noun)
+
+(0549 river					noun)
+(0549 stream				noun)
+(0549 creek					noun)
+(0549 brook					noun)
+
+(0550 time					verb)
+
+(0551 microphone			noun)
+(0551 mike					noun)
+(0551 radio					noun)
+
+(0552 witch					adj)
+
+(0553 monkey				noun)
+(0553 chimpanzee			noun)
+
+(0554 island				noun)
+
+
+
+;**	LL1 words added here:
+
+(1000 soon					adv)
+
+(1001 later					adv)
+
+(1002 hurry					verb)
+
+(1003 want					adv)
+
+(1004 then					conj)
+
+(1005 more					adj)
+
+(1006 about					pos)
+
+(1007 oh						adj)
+
+(1008 if						adj)
+
+(1009 have					auxv verb)
+
+(1010 been					verb)
+
+(1011 until					pos)
+
+(1012 hot					adj)
+
+(1013 cold					adj)
+
+(1014 till					adj)
+
+(1015 good					adj)
+
+(1016 black					adj)
+
+(1017 beautiful			adj)
+(1017 lovely				adj)
+(1017 young					adj)
+(1017 gorgeous				adj)
+(1017 cute					adj)
+(1017 sexy					adj)
+
+(1018 cheap					adj)
+
+(1019 plastic				adj)
+
+(1020 front					noun)
+
+(1021 sleazy				adj)
+(1021 funky					adj)
+(1021 bad					adj)
+
+(1022 main					adj)
+
+(1023 dance					verb noun)
+(1023 date					verb noun)
+
+(1024 flush					verb)
+
+(1025 lobby					noun)
+
+(1026 wallet				noun)
+(1026 billfold				noun)
+
+(1027 count					verb)
+
+(1028 present				verb noun)
+
+(1029 thank					verb)
+(1029 thanks				verb)
+
+(1030 hotel					noun)
+(1030 resort				noun)
+
+(1031 long					adj)
+(1031 length				adj)
+
+(1032 wine					noun)
+(1032 champagne			noun)
+(1032 beer					noun)
+(1032 whiskey				noun)
+(1032 whisky				noun)
+(1032 shot					noun)
+(1032 booze					noun)
+(1032 rum					noun)
+(1032 rye					noun)
+(1032 scotch				noun)
+(1032 liquor				noun)
+(1032 bourbon				noun)
+(1032 gin					noun)
+(1032 vodka					noun)
+
+(1033 paper					noun)
+(1033 newspaper			noun)
+
+(1034 number				noun)
+
+(1035 corner				noun)
+
+(1036 make					verb)
+
+(1037 wipe					verb)
+(1037 dry					verb)
+
+(1038 dog					noun)
+(1038 doggy					noun)
+(1038 pup					noun)
+(1038 puppy					noun)
+
+(1039 along					adv)
+
+(1040 sing					verb)
+
+(1041 side					noun)
+
+(1042 deliver				verb)
+
+(1043 smooth				verb)
+
+(1044 heckle				verb)
+(1044 boo					verb)
+(1044 hiss					verb)
+
+(1045 music					noun)
+(1045 sound					noun)
+(1045 song					noun)
+(1045 record				noun verb)
+(1045 tune					noun verb)
+
+(1046 loosen				verb)
+
+(1047 dress					verb noun)
+(1047 dressed				verb noun)
+
+(1048 way					noun)
+
+(1049 garden				noun)
+(1049 terrace				noun)
+
+(1050 fence					noun)
+
+(1051 come					verb)
+
+(1052 laugh					verb)
+
+(1053 pillow				noun)
+
+(1054 tip					verb noun)
+
+(1055 bribe					verb noun)
+
+(1056 cooler				noun)
+(1056 refrigerator		noun)
+(1056 icebox				noun)
+
+(1057 clap					verb)
+(1057 applaud				verb)
+(1057 cheer					verb)
+
+(1058 away					adv)
+
+(1059 alley					noun)
+
+(1063 flirt					verb)
+(1063 wink					verb)
+
+
+
+;**	Do not read below this line:
+(2000 bathroom				noun)				
+(2000 shithouse			noun)				
+(2000 restroom				noun)
+(2000 lavatory				noun)
+(2000 john					noun)
+(2000 toilet				noun)
+(2000 potty					noun verb)
+(2000 throne				verb)
+(2000 urinal				verb)
+
+(2001 fucking				adj)
+(2001 sucking				adj)
+
+(2002 pussy					noun)
+(2002 cunt					noun)
+(2002 crack					noun)
+(2002 fur					noun)
+(2002 snatch				noun)
+(2002 slit					noun)
+(2002 clit					noun)
+(2002 clitoris				noun)
+;(2002 'piece of ass'		noun)
+;(2002 'piece of tail'	noun)
+(2002 sex					noun)
+
+(2003 shit					verb noun)
+(2003 crap					verb noun)
+(2003 dump					verb noun)
+(2003 defecate				noun)
+
+(2004 piss					noun verb)
+(2004 pee					noun verb)
+(2004 urinate				noun verb)
+(2004 leak					noun verb)
+
+(2005 fuck					verb noun)
+(2005 hump					verb)
+(2005 seduce				verb)
+;(2005 'sleep with'		verb)
+;(2005 'make love'			verb)		
+;(2005 'jump her bones'	verb)
+(2005 lay					verb)
+(2005 screw					verb)
+(2005 copulate				verb)
+(2005 mount					verb)
+;(2005 'mount up'			verb)
+;(2005 'have sex'			verb)
+
+(2006 fart					verb noun)
+;(2006 'cut one'			noun)
+
+;(2007 'dirty word'		noun)
+(2007 fucker				noun)
+(2007 motherfucker		noun)
+;(2007 'mother fucker'	noun)
+(2007 cocksucker			noun)
+;(2007 'cock sucker'		noun)
+(2007 asshole				noun)
+(2007 dickhead				noun)
+;(2007 'dick head'			noun)
+(2007 shithead				noun)
+(2007 bullshit				noun)
+(2007 fag					noun)
+(2007 faggot				noun)
+(2007 bitch					noun)
+;(2007 'what the fuck'	noun)
+(2007 dyke					noun)
+(2007 sixtynine			noun)
+(2007 cunnilingus			noun)
+;(2007 'blow job'			noun)
+;(2007 'suck me'			noun)
+
+(2008 tit					noun)
+(2008 breast				noun)
+(2008 boob					noun)
+(2008 knocker				noun)
+(2008 nipple				noun)
+
+(2009 ass					noun)
+(2009 butt					noun)
+(2009 rearend				noun)
+
+(2010 dick					noun)
+(2010 cock					noun)
+(2010 prick					noun)
+(2010 dong					noun)
+(2010 ball					noun)
+(2010 nut					noun)
+(2010 gimme					noun)
+
+(2011 dam					noun)
+(2011 damn					noun)
+;(2011 'god dam'			noun)
+;(2011 'god damn'			noun)
+;(2011 'dam it'				noun)
+;(2011 'damn it'			noun)
+;(2011 'go to hell'		noun)
+;(2011 'bull shit'			noun)
+;(2011 'sit on it'			noun)
+;(2011 'up your'			noun)
+;(2011 'up yours'			noun)
+;(2011 'fuck off'			noun)
+;(2011 'fuck you'			noun)
+;(2011 'jesus christ'		noun)
+(2011 christ				noun)
+
+(2012 masturbate			verb)
+(2012 jack 					verb)
+
+(2013 bone					noun)
+
+
+
+;**  This word means match only no word:  'look/!*' only true if "look"
+(4094 !*						)
+(4094 !						)
+(4094 noword				)
+
+;**  This word matches all words:  (but why bother?)
+(4095 * 						noun verb adj art adv conj pos pron)
+(4095 anyword				noun verb adj art adv conj pos pron)
+
+(3000 bee					noun)
+(3000 insect				noun)
+(3000 swarm					noun)
+
+(3001 doctor				noun)
+
+(3002 drug					noun)
+
+(3003 sale					noun)
+
+(3004 sign					noun verb)
+
+(3005 taxi					noun)
+(3005 taxicab				noun)
+(3005 cab					noun)
+
+(3006 cosmo					noun)
+(3006 magazine				noun)
+(3006 cosmopolitan		noun)
+
+(3007 unreversal 			noun)
+
+(3008 chaise				adj)
+
+(3009 spinach				adj)
+
+(3010 ladder				noun)
+
+(3011 sourdough			noun)
+
+(3012 overboard			noun adv)
+
+(3013 gravy					noun)
+
+(3014 red					adj)
+(3014 green					adj)
+
+(3016 honey					noun)
+
+(3017 pattern				noun)
+
+(3018 axe					noun)
+(3018 hatchet				noun)
+
+(3019 line					noun)
+
+(3020 pole					noun)
+
+(3021	plaque				noun)
+(3021	medallion			noun)
+
+(3022 whistle				verb noun)
+
+(3023 coconuts				noun)
+
+(3024 peacock				noun)
+(3024 feather				noun)
+
+(3025 note					noun)
+
+(3026	suntan				verb noun)
+(3026	tanning				verb noun)
+
+
+(3027 leather				adj)
+
+(3028 spray					noun verb)
+
+(3029 lint					noun)
+
+(3030 wrist					noun)
+
+(3031 tube					noun)
+(3031 inner					noun)
+(3031 innertube			noun)
+
+(3032 towel					noun)
+
+(3033 stomach				noun)
+
+(3034 mooring				noun)
+(3034 apparatus			noun)
+
+(3035	shower				noun verb)
+(3035 bathtub				noun)
+(3035 tub					noun)
+
+(3036 schedule				noun)
+
+(3037	vending				adj)
+
+(3038 microfiche			noun)
+
+(3039 quicksand			noun)
+
+(3040 fish					noun)
+(3040 piranha				noun)
+
+(3041 reporter				noun)
+
+(3042	bomb					noun)
+
+(3043 frag					noun)
+
+(3044 debug					noun verb)
+
+(3045 brown					adj)
+
+(3046 southern				adj)
+
+(3047 again					adj)
+
+(3048 crown					noun)
+
+(3049 watch					noun)
+
+(3056 drink					verb noun)
+(3056 nip					verb noun)
+
+(3057 graffiti				noun)
+(3057 insult				noun)
+
+(3058 pitch					verb)
+
+(3059 mower					noun)
+
+(3060 mixed					adj)
+
+(3061 flag					noun)
+
+(3062	crackers				noun)
+
+(3063 silver				noun)
+(3063 linen					noun)
+(3063 crystal				noun)
+
+(3064 ready					adj)
+
+(3065 spongy				adj)
+
+(3066 tropical				adj)
+
+(3067 crumpled				adj)
+
+(3068 skylight				noun)
+
+(3069 dream					verb noun)
+(3069 daydream				verb noun)
+
+;	formerly "debug larry":
+(3070 praise				verb)
+(3071 lord					noun)
+
+(3072 o						pos)
+
+(3073 podium				noun)
+(3073 lectern				noun)
+
+(3074 dull					adj)
+(3074 dumb					adj)
+(3074 boring				adj)
+
+(3075 italian				adj)
+
+(3076 guard					noun)
+(3076 security				noun)
+(3076 cop					noun)
+(3076 policeman			noun)
+(3076 soldier				noun)
+
+(3077 krishna				noun)
+(3077 cult					noun)
+(3077 hari					noun)
+
+(3078 hell					noun)
+
+(3079 heck					noun)
+
+(3080 raisin				noun)
+
+(3081	channel				adj)
+(3081	channeling			adj)
+

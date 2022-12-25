@@ -1,0 +1,31 @@
+(instance aBigFace of Prop
+	(method (cue)
+		(self hide:)
+	)
+)
+
+	(method (newRoom n)
+		(aBigFace dispose:)
+		(super newRoom: n)
+	)
+
+	(define	lBigFace		1)
+
+	aBigFace
+
+		(aBigFace
+			view:				v
+			setLoop:			lBigFace
+			posn:				273 59
+			setPri:			15
+			setCycle:		Forward
+			init:
+			hide:
+		)
+
+			((Said 'look/girl')
+				(aBigFace show:)
+				(Print "You find -- women sexy." draw:)
+				(Print "(But then, you find any woman sexy!)" LOW)
+				(Timer setReal: aBigFace 5)
+			)

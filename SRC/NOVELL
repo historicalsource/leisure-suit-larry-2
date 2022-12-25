@@ -1,0 +1,11 @@
+script=script;/games/sci/system
+vocab=script;/games/sci/system
+text=script;/games/sci/system
+view=view;/games/sci/system
+sound=sound
+pic=pic
+font=/games/sci/system
+cursor=/games/sci/system
+videoDrv=/games/sci/system/ega320.drv
+soundDrv=/games/sci/system/std.drv
+kbdDrv=/games/sci/system/ibmkbd.drv

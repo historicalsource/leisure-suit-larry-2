@@ -1,0 +1,21 @@
+		(Load SCRIPT EXTRA)
+
+		((= a (Extra new:))
+			view:				v
+			loop: 			
+			cel:				
+			posn: 			
+			setPri: 			
+			cycleSpeed:		2					;**	these are the defaults anyway...
+			pauseCel:		0
+			minPause:		2
+			maxPause:		10
+			minCycles:		5
+			maxCycles:		20
+			init:
+		)
+
+	(method (dispose)
+		(DisposeScript EXTRA) 
+		(super dispose:)
+	)							

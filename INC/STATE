@@ -1,0 +1,5 @@
+ &tmp [str 100]
+		(if (> newState 3)
+			(Print (Format @str "State = %d" newState))
+		)
+

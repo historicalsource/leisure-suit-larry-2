@@ -1,0 +1,13 @@
+		((= a (Actor new:))
+			view:				v
+			ignoreActors:
+			illegalBits:	cLtWhite
+			setLoop:			
+			setCel:			
+			setPri:			
+			setCycle:		Walk
+			posn:				
+			stopUpd:
+			init:
+		)
+

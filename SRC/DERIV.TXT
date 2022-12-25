@@ -1,0 +1,66 @@
+;			deriv.txt	-	English version
+;			*********
+;
+;this file contains the specifications for word transformations to be 
+;attempted when a word is not found in the dictionary. The notation is:
+;
+;(<input pattern> <parts of speech> <root pattern> <root parts of speech>)
+;
+;The idea is that if the result of applying a transform is an entry in the 
+;dictionary with the right word classification, then we have a match.
+;
+;			-- Pablo Ghenis
+;--------------------------------------------------------------------------
+
+(*s      noun             *       noun )  ; books -> book 
+(*es     noun             *       noun )  ; boxes -> box 
+(*ies    noun             *y      noun )  ; fairies -> fairy 
+(*men    noun             *man    noun )  ; women -> woman 
+(*ves    noun             *fe     noun )  ; knives -> knife 
+(*ves    noun             *f      noun )  ; leaves -> leaf 
+(*people noun             *person noun )  ; chairpeople -> chairperson 
+   
+(*ing    noun adj verb    *  verb )  ; playing -> play 
+(*ing    noun adj verb    *e verb )  ; living -> live 
+(*nning  noun adj verb    *n verb )  ; running -> run 
+(*pping  noun adj verb    *p verb )  ; shopping -> shop 
+(*mming  noun adj verb    *m verb )  ; swimming -> swim 
+(*tting  noun adj verb    *t verb )  ; batting -> bat 
+(*rring  noun adj verb    *r verb )  ; sparring -> spar 
+(*gging  noun adj verb    *g verb )  ; digging -> dig 
+   
+(*ed     adj noun         *  verb)  ; painted -> paint 
+(*ed     adj noun         *e verb)  ; closed -> close 
+(*nned   adj noun         *n verb)  ; conned -> con 
+(*pped   adj noun         *p verb)  ; shopped -> shop 
+(*mmed   adj noun         *m verb)  ; dimmed -> dim 
+(*tted   adj noun         *t verb)  ; batted -> bat 
+(*rred   adj noun         *r verb)  ; sparred -> spar 
+(*gged   adj noun         *g verb)  ; rigged -> rig 
+(*ied    adj noun         *y verb)  ; tried -> try 
+   
+(*er     adj noun         *  adj verb)  ; painter -> paint 
+(*er     adj noun         *e adj verb)  ; closer -> close 
+(*nner   adj noun         *n adj verb)  ; thinner -> thin 
+(*pper   adj noun         *p adj verb)  ; shopper -> shop 
+(*mmer   adj noun         *m adj verb)  ; dimmer -> dim 
+(*tter   adj noun         *t adj verb)  ; fatter -> fat 
+(*rrer   adj noun         *r adj verb)  ;  ->  
+(*gger   adj noun         *g adj verb)  ; bigger -> big 
+(*ier    adj noun         *y adj verb)  ; lowlier -> lowly 
+   
+(*est    adj              *  adj )  ; slowest -> slow 
+(*est    adj              *e adj )  ; closest -> close 
+(*nnest  adj              *n adj )  ; thinnest -> thin 
+(*ppest  adj              *p adj )  ; hippest -> hip 
+(*mmest  adj              *m adj )  ; dimmest -> dim 
+(*ttest  adj              *t adj )  ; fattest -> fat 
+(*rrest  adj              *r adj )  ;  ->  
+(*ggest  adj              *g adj )  ; biggest -> big 
+(*iest   adj              *y adj )  ; lowliest -> lowly 
+   
+(*ly     adv              *  adj )  ; slowly -> slow 
+   
+(*y      adj              * noun )  ; rocky -> rock 
+   
+(*ish    adj              *  adj )  ; yellowish -> yellow 

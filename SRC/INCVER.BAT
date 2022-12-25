@@ -1,0 +1,1 @@
+\system\incver script\script.000 -vVersion

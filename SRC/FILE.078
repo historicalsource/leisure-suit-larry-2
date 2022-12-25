@@ -1,0 +1,46 @@
+
+; pre-wedding ceremony, before Larry & Kalalau enter
+(family view: 714 loop: 3 cel: 0 posn: 116 115 setPri: 7)add to pic
+(mother & baby view: 714 loop: 3 cel: 1 posn: 67 106 setPri: 7)add to pic
+(chief view: 710 loop: 2 cel: 3 posn: 199 150 setPri: 11)add to pic
+(drummer view: 714 loop: 1 cel: 0 posn: 241 132 setPri: 9)forward
+(witchdoctor view: 711 loop: 3 cel: 0 posn: 159 182 setPri: 14)still for now
+(hula-hoop dancer view: 823 loop: 0 cel: 0 posn: 146 129 setPri: 9)start here,
+                       walk to 227 129, step size 1,1; then add to pic
+(male dancer view: 823 loop: 1 cel: 0 posn: 118 145 setPri: 10)start here,
+                   walk to 42 107, step size 2, 2; then add to pic 
+
+
+; Larry & Kalalau enter scene here
+(ego view: 0 loop: 0 cel: 7 posn: 10 152 setPri: 11)
+(kalalau view: 704 loop: 0 cel: 4 posn: 22 151 setPri: 11)
+
+; walk to here, then dispose
+(ego view: 0 loop: 0 cel: 0 posn: 169 152 setPri: 11)
+(kalalau view: 704 loop: 0 cel: 2 posn: 178 151 setPri: 11)
+
+; L & K facing each other, end loop
+(ego & K view: 822 loop: 0 cel: 0 posn: 172 152 setPri: 11)
+
+; L & K twirling, forward, end on cel 0
+(ego & K view: 822 loop: 1 cel: 0 posn: 172 152 setPri: 11)
+
+; photographer comes in
+(witchdoctor view: 713 loop: 1 cel: 0 posn: 159 157 setPri: 11)replace witch-
+                   doctor view 711 with this view & position, forward loop 
+(photographer view: 823 loop: 2 cel: 3 posn: 24 171 setPri: 13)start walk here,
+                    then walk to 143 171 
+
+; photographer scene
+(ego & K view: 822 loop: 2 cel: 0 posn: 172 152 setPri: 11)still cel
+(magic hearts view: 822 loop: 3 cel: 7 posn: 171 140 setPri: 12)end loop
+(cupid wings 1 view: 822 loop: 5 cel: 0 posn: 187 107 setPri: 7)forward
+(cupid wings 2 view: 822 loop: 4 cel: 0 posn: 155 107 setPri: 7)forward
+(photographer view: 823 loop: 3 cel: 3 posn: 143 171 setPri: 10)end loop,
+(camera flash view: 823 loop 4  cel 0  posn  148 136 setPri 9)end loop, dispose                    
+
+; larry & witchdoctor walk to hut
+dispose of heart, cupids, L & K( 822 loops 2, 3, 4 & 5 
+(ego view: 0 loop: 3 cel: 0 posn: 164 151 setPri: 11)ego turns, & walks to hut
+(kalalau view: 704 loop: 3 cel: 3 posn: 178 151 setPri: 12)add to pic
+(witchdoctor view: 711 loop: 3 cel: 0 posn: 159 182 setPri: 14)walk to hut

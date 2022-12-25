@@ -1,0 +1,8 @@
+
+		(if (== NORTH SOUTH EAST WEST (ego edgeHit?))
+			(if ( < (ego y?) 167)
+				(curRoom newRoom: 19)
+			else
+				(curRoom newRoom: 24)
+			)
+		)

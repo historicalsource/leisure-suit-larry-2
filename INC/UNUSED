@@ -1,0 +1,131 @@
+;**	This block of code goes in Room 0 init:
+
+;**			(StatusLine 
+;**				code: status 
+;**				state: TRUE 
+;**				enable:
+;**			)
+
+
+;**	This block goes in "time" area:
+
+;**				(if (== 0 (& systime %111111));**	seconds are low 6 bits
+;**					(StatusLine doit:))			;**	only update 1/minute
+
+
+;**	This block goes in Room 0 somewhere.
+
+;**	(instance status of Code
+;**		(method (doit str &tmp systime)
+;**			(= systime (GetTime 1))
+;**			(Format str
+;**				"%2s 
+;**				Score: %d of %d%20s
+;**				%02u:%02u %20s"
+;**				" "
+;**				(theGame score?)
+;**				(theGame possibleScore?)
+;**				" "
+;**				(>> systime 12)					;**	hours are top 4 bits
+;**				(& (>> systime 6) %111111)		;**	minutes are middle 6 bits
+;**				(& systime %111111)				;**	seconds are low 6 bits
+;**				%2u:%02u:%02u %20s"
+;**				" "
+;**			)
+;**		)
+;**	)
+
+
+
+;**	(instance clockI of MItem
+;**		(properties
+;**			text: "Clock on"
+;**		)
+;**	
+;**		(method (doit)
+;**			(if (== text "Clock on")
+;**				(= text "Clock off")
+;**			else
+;**				(= text "Clock on")
+;**			)
+;**			(Clock init:)
+;**		)
+;**	)
+;**	
+;**	
+;**	(class Clock kindof Object
+;**		(properties
+;**			time 0
+;**			myDialog 0
+;**		)
+;**	
+;**		(method (init)
+;**			(= myDialog (Print "00:00:00" font: 0 at: 250 12 yes:0 dispose:))
+;**			(self doit:)
+;**		)
+;**	
+;**		(method (dispose)
+;**			(myDialog dispose:)
+;**			(= myDialog 0)
+;**		)
+;**	
+;**		(method (doit &tmp [str 20] newTime)
+;**			(= newTime (GetTime 1))
+;**			(if (!= time newTime)
+;**				(= time newTime)
+;**	
+;**				(if (not myDialog)
+;**					(return)
+;**				)
+;**	
+;**				(Format								; make new time string
+;**					@str "%02u:%02u:%02u"
+;**					(>> time 12)					; hours are top 4 bits
+;**					(& (>> time 6) %111111)		; minutes are middle 6 bits
+;**					(& time %111111)				; seconds are low 6 bits
+;**				)
+;**	
+;**				((myDialog at:0) text: @str)	; attach to only item in dialog
+;**				(myDialog draw:)
+;**			)
+;**		)
+;**	)
+
+
+
+
+;*****************************************************************************
+
+
+		This is stuff from KQ4 that Al doesn't use:
+
+
+;**	(instance SmallBase of Code
+;**	   (method (doit actor)
+;**	       (actor brTop:       (- (actor y?) (actor yStep?)))
+;**	       (actor brLeft:      (- (actor x?) (actor xStep?)))
+;**	       (actor brBottom:    (actor y?))
+;**	       (actor brRight:     (+ (actor x?) (actor xStep?)))
+;**	   )
+;**	)
+
+
+;**	Pop actor off the control he's on, in the direction he's currently
+;**	facing.  Distance to pop defaults to 5.
+
+;**	(procedure (GetOffCtrl actor dist)
+;**		(if ( < argc 2)
+;**			(= dist 5))
+;**
+;**		(switch (actor loop?)
+;**			(0	(return (OnControl (actor x?) (actor y?)
+;**					(+ (actor x?) dist) (+ (actor y?) 1))))
+;**			(1	(return (OnControl (- (actor x?) dist) (actor y?)
+;**		   		(actor x?) (+ (actor y?) 1))))
+;**			(2	(return (OnControl (actor x?) (actor y?)
+;**					(+ (actor x?) 1) (+ (actor y?) dist))))
+;**			(3	(return (OnControl (actor x?) (- (actor y?) dist)
+;**					(+ (actor x?) 1) (actor y?))))
+;**		)
+;**	)
+

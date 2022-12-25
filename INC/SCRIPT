@@ -1,0 +1,27 @@
+(enum												;**	xxScript state values
+	xxInit
+	xxStart
+	xxMiddle
+	xxDone
+)
+
+(instance xxScript of Script
+	(method (changeState newState &tmp xxX xxY [str 100])
+		(switch (= state newState)
+
+			(xxInit
+				(delay (Random 5 10))
+			)
+
+			(xxStart
+			)
+
+			(xxMiddle
+			)
+
+			(xxDone
+			)
+		)
+	)
+)
+

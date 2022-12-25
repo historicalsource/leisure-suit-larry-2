@@ -1,0 +1,20 @@
+(procedure (doxx who tvLoop)
+	(aTV
+		setLoop:			tvLoop
+		setCel:			0
+		cycleSpeed:		0
+		setCycle:		Forward
+	)
+
+	(who
+		cycleSpeed:		0
+		setCycle:		Forward
+		setCel:			(if (> argc 1)
+								cel
+							else 
+								2
+							)
+		stopUpd:
+	)
+)
+

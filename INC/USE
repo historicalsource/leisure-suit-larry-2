@@ -1,0 +1,21 @@
+		(if (Said 'use/xx')
+			(cond
+				((not (ego has: ixx))
+					(Print dontHaveIt)
+				)
+	
+				((!= currentStatus NORMAL)
+					(Print notNow)
+				)
+	
+				((not (ego inRect: nearxx))
+					(Print notCloseEnough)
+				)
+	
+				(else
+					(Print ok)
+					(self changeState: startxx)
+				)
+			)
+		)
+

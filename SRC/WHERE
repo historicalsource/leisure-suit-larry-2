@@ -1,0 +1,12 @@
+script=/ll2/script
+vocab=/ll2/script
+text=/ll2/script
+view=/ll2/view
+sound=/ll2/sound
+pic=/ll2/pic
+font=/system
+cursor=/system
+videoDrv=/system/ega320.drv
+soundDrv=/system/std.drv
+kbdDrv=/system/ibmkbd.drv
+joydrv=/system/joystick.drv
